@@ -12,6 +12,7 @@
 		A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CE20DEFFC10096103F /* SelectableButton.swift */; };
 		A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7D020DF02490096103F /* UIImageExtensions.swift */; };
 		A9A2F7D520DF08CD0096103F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7D420DF08CD0096103F /* DictionaryExtension.swift */; };
+		A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7E520DF4CE10096103F /* InstantiateExtensions.swift */; };
 		A9B281BB20DEECCA00C3B9CD /* Xelby.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B281B920DEECCA00C3B9CD /* Xelby.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B281C920DEEEF600C3B9CD /* CGExtensions.swift */; };
 		A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B281CE20DEF2C600C3B9CD /* UIColorExtensions.swift */; };
@@ -23,6 +24,7 @@
 		A9A2F7CE20DEFFC10096103F /* SelectableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
 		A9A2F7D020DF02490096103F /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = ../../../Xelby/Sources/Graphics/UIImageExtensions.swift; sourceTree = "<group>"; };
 		A9A2F7D420DF08CD0096103F /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		A9A2F7E520DF4CE10096103F /* InstantiateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantiateExtensions.swift; sourceTree = "<group>"; };
 		A9B281B620DEECCA00C3B9CD /* Xelby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Xelby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B281B920DEECCA00C3B9CD /* Xelby.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xelby.h; sourceTree = "<group>"; };
 		A9B281BA20DEECCA00C3B9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,19 +59,20 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		A9A2F7D220DF030F0096103F /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		A9A2F7D320DF08BF0096103F /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
 				A9A2F7D420DF08CD0096103F /* DictionaryExtension.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A9A2F7E420DF4CD80096103F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A9A2F7E520DF4CE10096103F /* InstantiateExtensions.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		A9B281AC20DEECCA00C3B9CD = {
@@ -101,8 +104,8 @@
 		A9B281C720DEEE2C00C3B9CD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A9A2F7E420DF4CD80096103F /* Common */,
 				A9A2F7D320DF08BF0096103F /* Foundation */,
-				A9A2F7D220DF030F0096103F /* Network */,
 				A9A2F7CC20DEFFAF0096103F /* Views */,
 				A9B281C820DEEED000C3B9CD /* Graphics */,
 			);
@@ -204,6 +207,7 @@
 				A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */,
 				A9A2F7D520DF08CD0096103F /* DictionaryExtension.swift in Sources */,
 				A9A2F7CB20DEFF040096103F /* CALayerExtensions.swift in Sources */,
+				A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */,
