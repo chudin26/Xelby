@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7C820DEFE540096103F /* PathMaker.swift */; };
-		A9A2F7CB20DEFF040096103F /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CA20DEFF030096103F /* CALayerExtensions.swift */; };
+		A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */; };
 		A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CE20DEFFC10096103F /* SelectableButton.swift */; };
 		A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7D020DF02490096103F /* UIImageExtensions.swift */; };
 		A9A2F7D520DF08CD0096103F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7D420DF08CD0096103F /* DictionaryExtension.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A9A2F7C820DEFE540096103F /* PathMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathMaker.swift; sourceTree = "<group>"; };
-		A9A2F7CA20DEFF030096103F /* CALayerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
+		A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationExtensions.swift; sourceTree = "<group>"; };
 		A9A2F7CE20DEFFC10096103F /* SelectableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
 		A9A2F7D020DF02490096103F /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = ../../../Xelby/Sources/Graphics/UIImageExtensions.swift; sourceTree = "<group>"; };
 		A9A2F7D420DF08CD0096103F /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		A9B281C820DEEED000C3B9CD /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				A9A2F7CA20DEFF030096103F /* CALayerExtensions.swift */,
+				A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */,
 				A9A2F7C820DEFE540096103F /* PathMaker.swift */,
 				A9B281C920DEEEF600C3B9CD /* CGExtensions.swift */,
 				A9B281CE20DEF2C600C3B9CD /* UIColorExtensions.swift */,
@@ -206,7 +206,7 @@
 				A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */,
 				A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */,
 				A9A2F7D520DF08CD0096103F /* DictionaryExtension.swift in Sources */,
-				A9A2F7CB20DEFF040096103F /* CALayerExtensions.swift in Sources */,
+				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
 				A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
