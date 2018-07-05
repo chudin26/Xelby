@@ -35,14 +35,45 @@ public extension UIView {
 	
 }
 
-public final class AnimationCurve {
+public enum AnimationCurve {
 	public static let springEaseOut = CAMediaTimingFunction(controlPoints: 0.3, 1.45, 0.4, 0.9)
 	public static let springEaseIn = CAMediaTimingFunction(controlPoints: 0.6, 0.1, 0.7, -0.45)
 }
 
-extension CALayer: CAAnimationDelegate {
+extension CAAnimation {
 	
-	public func animate(property: String, from: Any? = nil, to: Any, duration: CFTimeInterval = 0, delay: CFTimeInterval = 0, curve: CAMediaTimingFunction? = nil) {
+	public class AnimationHandler: NSObject, CAAnimationDelegate {
+		public var onStart: ((CAAnimation) -> ())?
+		public var onStop: ((CAAnimation, Bool) -> ())?
+		
+		public init(onStart: ((CAAnimation) -> ())? = nil, onStop: ((CAAnimation, Bool) -> ())?) {
+			self.onStart = onStart
+			self.onStop = onStop
+		}
+
+		public func animationDidStart(_ anim: CAAnimation) {
+			onStart?(anim)
+		}
+		
+		public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+			onStop?(anim, flag)
+		}
+	}
+
+	private static var associatedObjectHandler: UInt8 = 0
+	public var animationHandler: AnimationHandler? {
+		get { return objc_getAssociatedObject(self, &CAAnimation.associatedObjectHandler) as? AnimationHandler }
+		set {
+			objc_setAssociatedObject(self, &CAAnimation.associatedObjectHandler, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+			delegate = newValue
+		}
+	}
+
+}
+
+extension CALayer {
+	
+	public func animate(property: String, from: Any? = nil, to: Any, duration: CFTimeInterval = 0, delay: CFTimeInterval = 0, curve: CAMediaTimingFunction? = nil, handler: CAAnimation.AnimationHandler? = nil) {
 		let currentValue = (presentation() ?? self).value(forKey: property)
 		if let from = from {
 			setValue(from, forKey: property)
@@ -54,25 +85,18 @@ extension CALayer: CAAnimationDelegate {
 		animation.toValue = to
 		animation.duration = duration
 		animation.beginTime = CACurrentMediaTime() + delay
-		animation.delegate = self
-//		animation.fillMode = kCAFillModeForwards
-//		animation.isRemovedOnCompletion = false
+		
+		let animationHandler = CAAnimation.AnimationHandler(onStart: { [weak self] anim in
+			guard let keyPath = anim.value(forKey: "keyPath") as? String,
+				let toValue = anim.value(forKey: "toValue") else { return }
+			
+			self?.setValue(toValue, forKey: keyPath)
+			handler?.onStart?(anim)
+		}, onStop: handler?.onStop)
+		
+		animation.animationHandler = animationHandler
 		
 		add(animation, forKey: property)
-	}
-	
-	public func animationDidStart(_ anim: CAAnimation) {
-		guard let keyPath = anim.value(forKey: "keyPath") as? String,
-			let toValue = anim.value(forKey: "toValue") else { return }
-		
-		self.setValue(toValue, forKey: keyPath)
-	}
-	
-	public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-//		guard let keyPath = anim.value(forKey: "keyPath") as? String,
-//			let toValue = anim.value(forKey: "toValue") else { return }
-//
-//		self.setValue(toValue, forKey: keyPath)
 	}
 	
 }

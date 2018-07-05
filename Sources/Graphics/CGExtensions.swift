@@ -76,6 +76,10 @@ public extension CGSize {
 		self.init(width: width, height: height)
 	}
 	
+	static func * (size: CGSize, coef: CGFloat) -> CGSize {
+		return CGSize(size.width * coef, size.height * coef)
+	}
+
 }
 
 public extension CGRect {
