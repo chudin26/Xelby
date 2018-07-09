@@ -11,6 +11,8 @@ import UIKit
 open class AnimatableViewController: UIViewController {
 	
 	public var animator: Animator!
+	
+	private var animationStarted: Bool = false
 
 	override open func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +22,16 @@ open class AnimatableViewController: UIViewController {
 
 	override open func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+	}
+	
+	open override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
 		
-		if animateOnViewAppear() {
-			animator.start(reverse: false)
+		if !animationStarted {
+			if animateOnViewAppear() {
+				animator.start(reverse: false)
+				animationStarted = true
+			}
 		}
 	}
 	
