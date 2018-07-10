@@ -10,6 +10,11 @@ import UIKit
 
 public extension UIImage {
 	
+	static var ciContext: CIContext!
+	static func useCoreImage() {
+		ciContext = CIContext(options: nil)
+	}
+	
 	func resized(to lowest: CGFloat) -> UIImage {
 		return resized(to: CGSize(lowest, lowest))
 	}
@@ -29,6 +34,23 @@ public extension UIImage {
 		UIGraphicsEndImageContext()
 		
 		return newImage!
+	}
+	
+	func gaussianBlurred(radius: CGFloat) -> UIImage {
+		let currentFilter = CIFilter(name: "CIGaussianBlur")
+		let beginImage = CIImage(image: self)
+		currentFilter!.setValue(beginImage, forKey: kCIInputImageKey)
+		currentFilter!.setValue(radius, forKey: kCIInputRadiusKey)
+		
+		let cropFilter = CIFilter(name: "CICrop")
+		cropFilter!.setValue(currentFilter!.outputImage, forKey: kCIInputImageKey)
+		cropFilter!.setValue(CIVector(cgRect: beginImage!.extent), forKey: "inputRectangle")
+		
+		let output = cropFilter!.outputImage
+		
+		let cgimg = UIImage.ciContext.createCGImage(output!, from: output!.extent)
+		let processedImage = UIImage(cgImage: cgimg!)
+		return processedImage
 	}
 	
 }

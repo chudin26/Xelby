@@ -10,6 +10,7 @@
 		A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */; };
 		A908F7D320F0F56300697A07 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908F7D220F0F56300697A07 /* Animator.swift */; };
 		A908F7D520F0F5A100697A07 /* AnimatorAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908F7D420F0F5A100697A07 /* AnimatorAnimations.swift */; };
+		A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */; };
 		A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7C820DEFE540096103F /* PathMaker.swift */; };
 		A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */; };
 		A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CE20DEFFC10096103F /* SelectableButton.swift */; };
@@ -25,6 +26,7 @@
 		A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableViewController.swift; sourceTree = "<group>"; };
 		A908F7D220F0F56300697A07 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		A908F7D420F0F5A100697A07 /* AnimatorAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorAnimations.swift; sourceTree = "<group>"; };
+		A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAspectImageView.swift; sourceTree = "<group>"; };
 		A9A2F7C820DEFE540096103F /* PathMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathMaker.swift; sourceTree = "<group>"; };
 		A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationExtensions.swift; sourceTree = "<group>"; };
 		A9A2F7CE20DEFFC10096103F /* SelectableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
@@ -57,9 +59,18 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		A9418A7120F40C9300337C8B /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
 		A9A2F7CC20DEFFAF0096103F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9418A7120F40C9300337C8B /* ImageViews */,
 				A9A2F7CD20DEFFB40096103F /* Buttons */,
 			);
 			path = Views;
@@ -229,6 +240,7 @@
 				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
 				A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
+				A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */,
 			);
