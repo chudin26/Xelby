@@ -63,6 +63,9 @@ public class ImagePreviewViewController: UIViewController {
 		let recognizer = UITapGestureRecognizer(target: self, action: #selector(close))
 		imageView.addGestureRecognizer(recognizer)
 		scrollView.addGestureRecognizer(recognizer)
+		
+		let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(onPan(recognizer:)))
+		imageView.addGestureRecognizer(panRecognizer)
 
 		self.view = view
 	}
@@ -85,6 +88,12 @@ public class ImagePreviewViewController: UIViewController {
 		UIView.animate(withDuration: 0.25) {
 			self.imageView.frame = self.view.convert(self.imageViewStartFrame, to: self.scrollView)
 		}
+	}
+	
+	private var startPos: CGPoint = .zero
+	@objc private func onPan(recognizer: UIPanGestureRecognizer) {
+//		print("onPan")
+		// TODO: pan the image
 	}
 	
 	@objc private func close() {

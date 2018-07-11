@@ -34,7 +34,7 @@ public class Animator {
 	
 	public var defaultDuration: TimeInterval = 0.6
 	
-	var containerView: UIView
+	weak var containerView: UIView?
 	
 	public init(containerView: UIView) {
 		self.containerView = containerView
@@ -47,8 +47,8 @@ public class Animator {
 	
 	public func start(reverse: Bool = false) {
 		for anim in animations {
-			let setToStart = { anim.type.setToAnimatedState(view: anim.view, containerView: self.containerView) }
-			let setToEnd = { anim.type.setToOriginalState(view: anim.view, containerView: self.containerView) }
+			let setToStart = { anim.type.setToAnimatedState(view: anim.view, containerView: self.containerView!) }
+			let setToEnd = { anim.type.setToOriginalState(view: anim.view, containerView: self.containerView!) }
 			
 			!reverse ? setToStart() : setToEnd()
 			UIView.animate(withDuration: anim.duration, delay: anim.delay, curve: AnimationCurve.springEaseOut, animations: {
