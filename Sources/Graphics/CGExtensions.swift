@@ -70,6 +70,14 @@ public extension CGPoint {
 	
 }
 
+public extension CGRect {
+	
+	var center: CGPoint {
+		return CGPoint(midX, midY)
+	}
+	
+}
+
 public extension CGSize {
 	
 	init(_ width: CGFloat, _ height: CGFloat) {
@@ -79,15 +87,17 @@ public extension CGSize {
 	static func * (size: CGSize, coef: CGFloat) -> CGSize {
 		return CGSize(size.width * coef, size.height * coef)
 	}
-
-}
-
-public extension CGRect {
 	
-	var center: CGPoint {
-		return CGPoint(midX, midY)
+	func fit(toRect rect: CGRect) -> CGRect {
+		if width / height < rect.width / rect.height {
+			let coef = rect.height / height
+			return CGRect(x: (rect.width - width * coef) / 2, y: 0, width: width * coef, height: rect.height)
+		} else {
+			let coef = rect.width / width
+			return CGRect(x: 0, y: (rect.height - height * coef) / 2, width: rect.width, height: height * coef)
+		}
 	}
-	
+
 }
 
 public extension CGAffineTransform {
