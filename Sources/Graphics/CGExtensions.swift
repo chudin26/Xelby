@@ -57,7 +57,15 @@ public extension CGPoint {
 	static func - (point: CGPoint, vector: CGVector) -> CGPoint {
 		return CGPoint(x: point.x - vector.dx, y: point.y - vector.dy)
 	}
-	
+
+	static func + (p1: CGPoint, p2: CGPoint) -> CGPoint {
+		return CGPoint(x: p1.x + p2.x, y: p1.y + p2.y)
+	}
+
+	static func - (p1: CGPoint, p2: CGPoint) -> CGPoint {
+		return CGPoint(x: p1.x - p2.x, y: p1.y - p2.y)
+	}
+
 	static func += (point: inout CGPoint, vector: CGVector) {
 		point.x += vector.dx
 		point.y += vector.dy

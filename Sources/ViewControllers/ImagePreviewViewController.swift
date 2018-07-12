@@ -90,10 +90,25 @@ public class ImagePreviewViewController: UIViewController {
 		}
 	}
 	
-	private var startPos: CGPoint = .zero
 	@objc private func onPan(recognizer: UIPanGestureRecognizer) {
-//		print("onPan")
-		// TODO: pan the image
+		let offset = recognizer.translation(in: view)
+
+		if recognizer.state == .changed {
+			let translationTransform = CGAffineTransform(translationX: offset.x, y: offset.y)
+			imageView.transform = translationTransform
+		} else if recognizer.state == .ended {
+			if offset.y < -100 {
+				close()
+			} else {
+				UIView.animate(withDuration: 0.2) {
+					self.imageView.transform = .identity
+				}
+			}
+		} else if recognizer.state == .cancelled {
+			UIView.animate(withDuration: 0.2) {
+				self.imageView.transform = .identity
+			}
+		}
 	}
 	
 	@objc private func close() {
