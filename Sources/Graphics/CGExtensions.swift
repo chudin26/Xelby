@@ -18,6 +18,10 @@ public extension CGVector {
 		self.init(dx: cos(angle) * length, dy: sin(angle) * length)
 	}
 	
+	init(point: CGPoint) {
+		self.init(dx: point.x, dy: point.y)
+	}
+	
 	var length: CGFloat {
 		return sqrt(dx * dx + dy * dy)
 	}
