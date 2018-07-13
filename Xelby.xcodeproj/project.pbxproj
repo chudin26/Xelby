@@ -11,6 +11,7 @@
 		A908F7D320F0F56300697A07 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908F7D220F0F56300697A07 /* Animator.swift */; };
 		A908F7D520F0F5A100697A07 /* AnimatorAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908F7D420F0F5A100697A07 /* AnimatorAnimations.swift */; };
 		A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F2A4A20F7DEF000CA7B8E /* ArrowView.swift */; };
+		A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F2A5920F8136B00CA7B8E /* TimeMeasurement.swift */; };
 		A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */; };
 		A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */; };
 		A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7C820DEFE540096103F /* PathMaker.swift */; };
@@ -29,6 +30,7 @@
 		A908F7D220F0F56300697A07 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		A908F7D420F0F5A100697A07 /* AnimatorAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorAnimations.swift; sourceTree = "<group>"; };
 		A91F2A4A20F7DEF000CA7B8E /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArrowView.swift; path = ../../../Xelby/Sources/Views/ArrowView.swift; sourceTree = "<group>"; };
+		A91F2A5920F8136B00CA7B8E /* TimeMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeMeasurement.swift; path = ../../../Xelby/Sources/Helpers/TimeMeasurement.swift; sourceTree = "<group>"; };
 		A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAspectImageView.swift; sourceTree = "<group>"; };
 		A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagePreviewViewController.swift; path = ../../../Xelby/Sources/ViewControllers/ImagePreviewViewController.swift; sourceTree = "<group>"; };
 		A9A2F7C820DEFE540096103F /* PathMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathMaker.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 				A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A91F2A5820F8135000CA7B8E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A91F2A5920F8136B00CA7B8E /* TimeMeasurement.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A9418A7120F40C9300337C8B /* ImageViews */ = {
@@ -136,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A9A2F7E420DF4CD80096103F /* Common */,
+				A91F2A5820F8135000CA7B8E /* Helpers */,
 				A9A2F7D320DF08BF0096103F /* Foundation */,
 				A9A2F7CC20DEFFAF0096103F /* Views */,
 				A908F7CF20F0F51B00697A07 /* ViewControllers */,
@@ -245,6 +256,7 @@
 				A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */,
 				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
 				A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */,
+				A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
 				A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
