@@ -32,7 +32,9 @@ public class AnyAspectImageView: UIView {
 	public override func layoutSubviews() {
 		super.layoutSubviews()
 
-		imageLayer.frame = bounds
+		CALayer.performWithoutAnimation {
+			imageLayer.frame = bounds
+		}
 	}
 	
 	private func setup() {

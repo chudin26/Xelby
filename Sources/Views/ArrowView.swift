@@ -57,7 +57,6 @@ public class ArrowView: UIView {
 		path.addLine(to: isHorizontal ? CGPoint(bounds.width, bounds.height / 2) : CGPoint(bounds.width / 2, bounds.height))
 		path.addLine(to: isHorizontal ? CGPoint(0, bounds.height) : CGPoint(bounds.width, 0))
 		path.lineWidth = lineWidth
-		path.stroke()
 		
 		if isFlipped {
 			path.apply(CGAffineTransform(scaleX: isHorizontal ? -1 : 1, y: isHorizontal ? 1 : -1))

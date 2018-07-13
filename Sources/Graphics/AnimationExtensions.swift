@@ -20,6 +20,15 @@ public extension CALayer {
 		CATransaction.commit()
 	}
 	
+	public class func performWithoutAnimation(_ actions: () -> Void) {
+		CATransaction.begin()
+		CATransaction.setDisableActions(true)
+		
+		actions()
+		
+		CATransaction.commit()
+	}
+	
 }
 
 public extension UIView {
