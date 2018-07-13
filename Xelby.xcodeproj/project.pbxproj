@@ -13,6 +13,7 @@
 		A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F2A4A20F7DEF000CA7B8E /* ArrowView.swift */; };
 		A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F2A5920F8136B00CA7B8E /* TimeMeasurement.swift */; };
 		A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */; };
+		A978BC9B20F83EF30011BF84 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A978BC9A20F83EF20011BF84 /* Alerts.swift */; };
 		A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */; };
 		A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7C820DEFE540096103F /* PathMaker.swift */; };
 		A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */; };
@@ -32,6 +33,7 @@
 		A91F2A4A20F7DEF000CA7B8E /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArrowView.swift; path = ../../../Xelby/Sources/Views/ArrowView.swift; sourceTree = "<group>"; };
 		A91F2A5920F8136B00CA7B8E /* TimeMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeMeasurement.swift; path = ../../../Xelby/Sources/Helpers/TimeMeasurement.swift; sourceTree = "<group>"; };
 		A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAspectImageView.swift; sourceTree = "<group>"; };
+		A978BC9A20F83EF20011BF84 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagePreviewViewController.swift; path = ../../../Xelby/Sources/ViewControllers/ImagePreviewViewController.swift; sourceTree = "<group>"; };
 		A9A2F7C820DEFE540096103F /* PathMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathMaker.swift; sourceTree = "<group>"; };
 		A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationExtensions.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		A91F2A5820F8135000CA7B8E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A978BC9A20F83EF20011BF84 /* Alerts.swift */,
 				A91F2A5920F8136B00CA7B8E /* TimeMeasurement.swift */,
 			);
 			path = Helpers;
@@ -250,6 +253,7 @@
 			files = (
 				A908F7D320F0F56300697A07 /* Animator.swift in Sources */,
 				A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */,
+				A978BC9B20F83EF30011BF84 /* Alerts.swift in Sources */,
 				A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */,
 				A908F7D520F0F5A100697A07 /* AnimatorAnimations.swift in Sources */,
 				A9A2F7D520DF08CD0096103F /* DictionaryExtension.swift in Sources */,
