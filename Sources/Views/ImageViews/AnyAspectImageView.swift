@@ -17,27 +17,7 @@ public class AnyAspectImageView: UIView {
 		}
 	}
 	
-	private var imageLayer = CALayer()
-	
-	public override init(frame: CGRect) {
-		super.init(frame: frame)
-		setup()
-	}
-	
-	public required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-		setup()
-	}
-	
-	public override func layoutSubviews() {
-		super.layoutSubviews()
-
-		CALayer.performWithoutAnimation {
-			imageLayer.frame = bounds
-		}
-	}
-	
-	private func setup() {
+	private lazy var imageLayer: CALayer = {
 		clipsToBounds = true
 		
 		let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
@@ -46,9 +26,20 @@ public class AnyAspectImageView: UIView {
 		blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 		addSubview(blurEffectView)
 		
-		imageLayer.contentsGravity = kCAGravityResizeAspect
+		let l = CALayer()
+		l.contentsGravity = kCAGravityResizeAspect
 		layer.contentsGravity = kCAGravityResizeAspectFill
-		layer.addSublayer(imageLayer)
+		layer.addSublayer(l)
+		
+		return l
+	}()
+	
+	public override func layoutSubviews() {
+		super.layoutSubviews()
+
+		CALayer.performWithoutAnimation {
+			imageLayer.frame = bounds
+		}
 	}
 	
 	private func setupImages() {
