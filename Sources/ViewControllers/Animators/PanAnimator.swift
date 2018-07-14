@@ -64,6 +64,8 @@ public class PanAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIVie
 	}
 	
 	public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+		let duration = transitionDuration(using: transitionContext)
+		
 		let fromView = transitionContext.view(forKey: .from)!
 		let toView = transitionContext.view(forKey: .to)!
 
@@ -72,7 +74,7 @@ public class PanAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIVie
 		
 		let dir = dismissing ? direction.inverse : direction
 		toView.transform = dir.transform(forToView: fromView)
-		UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+		UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
 			fromView.transform = dir.transform(forFromView: fromView)
 			toView.transform = .identity
 		}, completion: { _ in
