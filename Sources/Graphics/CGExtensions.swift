@@ -30,10 +30,18 @@ public extension CGVector {
 		return length == 0 ? nil : self / length
 	}
 	
+	static func dot(_ v1: CGVector, _ v2: CGVector) -> CGFloat {
+		return v1.dx * v2.dx + v1.dy * v2.dy
+	}
+	
+	static func * (v1: CGVector, v2: CGVector) -> CGFloat {
+		return CGVector.dot(v1, v2)
+	}
+
 	static func * (vector: CGVector, value: CGFloat) -> CGVector {
 		return CGVector(dx: vector.dx * value, dy: vector.dy * value)
 	}
-	
+
 	static func / (vector: CGVector, value: CGFloat) -> CGVector {
 		return CGVector(dx: vector.dx / value, dy: vector.dy / value)
 	}

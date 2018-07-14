@@ -24,6 +24,9 @@
 		A9B281BB20DEECCA00C3B9CD /* Xelby.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B281B920DEECCA00C3B9CD /* Xelby.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B281C920DEEEF600C3B9CD /* CGExtensions.swift */; };
 		A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B281CE20DEF2C600C3B9CD /* UIColorExtensions.swift */; };
+		A9D388BA20FA34F50053C943 /* PanAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388B920FA34F50053C943 /* PanAnimator.swift */; };
+		A9D388BC20FA489B0053C943 /* GestureRecognizerClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388BB20FA489B0053C943 /* GestureRecognizerClosures.swift */; };
+		A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388BD20FA492B0053C943 /* ClosureHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		A9B281BA20DEECCA00C3B9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9B281C920DEEEF600C3B9CD /* CGExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
 		A9B281CE20DEF2C600C3B9CD /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		A9D388B920FA34F50053C943 /* PanAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PanAnimator.swift; path = ../../../../Xelby/Sources/ViewControllers/Animators/PanAnimator.swift; sourceTree = "<group>"; };
+		A9D388BB20FA489B0053C943 /* GestureRecognizerClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GestureRecognizerClosures.swift; path = ../../../Xelby/Sources/Helpers/GestureRecognizerClosures.swift; sourceTree = "<group>"; };
+		A9D388BD20FA492B0053C943 /* ClosureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		A908F7CF20F0F51B00697A07 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9D388B820FA34E30053C943 /* Animators */,
 				A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */,
 				A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */,
 			);
@@ -73,6 +80,8 @@
 			children = (
 				A978BC9A20F83EF20011BF84 /* Alerts.swift */,
 				A91F2A5920F8136B00CA7B8E /* TimeMeasurement.swift */,
+				A9D388BB20FA489B0053C943 /* GestureRecognizerClosures.swift */,
+				A9D388BD20FA492B0053C943 /* ClosureHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -172,6 +181,14 @@
 			path = Graphics;
 			sourceTree = "<group>";
 		};
+		A9D388B820FA34E30053C943 /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				A9D388B920FA34F50053C943 /* PanAnimator.swift */,
+			);
+			path = Animators;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -251,18 +268,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D388BA20FA34F50053C943 /* PanAnimator.swift in Sources */,
 				A908F7D320F0F56300697A07 /* Animator.swift in Sources */,
 				A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */,
 				A978BC9B20F83EF30011BF84 /* Alerts.swift in Sources */,
 				A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */,
 				A908F7D520F0F5A100697A07 /* AnimatorAnimations.swift in Sources */,
 				A9A2F7D520DF08CD0096103F /* DictionaryExtension.swift in Sources */,
+				A9D388BC20FA489B0053C943 /* GestureRecognizerClosures.swift in Sources */,
 				A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */,
 				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
 				A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */,
 				A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
 				A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */,
+				A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,
 				A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */,
