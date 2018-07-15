@@ -22,13 +22,19 @@ open class AnimatableViewController: UIViewController {
 
 	override open func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+
+		startAnimator()
 	}
 	
 	open override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		
+		startAnimator()
+	}
+	
+	private func startAnimator() {
 		if !animationStarted {
-			if animateOnViewAppear() {
+			if animateOnViewAppear {
 				animator.start(reverse: false)
 				animationStarted = true
 			}
@@ -38,16 +44,17 @@ open class AnimatableViewController: UIViewController {
 	override open func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		
-		if animateOnViewDisappear() {
+		animationStarted = false
+		if animateOnViewDisappear {
 			animator.start(reverse: true)
 		}
 	}
 	
-	open func animateOnViewAppear() -> Bool {
+	open var animateOnViewAppear: Bool {
 		return true
 	}
 
-	open func animateOnViewDisappear() -> Bool {
+	open var animateOnViewDisappear: Bool {
 		return false
 	}
 

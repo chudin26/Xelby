@@ -11,9 +11,27 @@ import UIKit
 @IBDesignable
 public class AnyAspectImageView: UIView {
 	
+	private let queue = DispatchQueue(label: "com.xelby.AnyAspectImageView", qos: DispatchQoS.background)
+	
 	@IBInspectable public var image: UIImage? {
 		didSet {
 			setupImages()
+		}
+	}
+	
+	public func setImage(fromFileUrl fileUrl: URL) {
+		let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+		loadingView.frame = bounds
+		loadingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		addSubview(loadingView)
+		
+		queue.async {
+			let imageData = UIImage(contentsOfFile: fileUrl.path)
+
+			DispatchQueue.main.async {
+				self.image = imageData
+				loadingView.removeFromSuperview()
+			}
 		}
 	}
 	
