@@ -19,13 +19,20 @@ public class AnyAspectImageView: UIView {
 		}
 	}
 	
+	private var imageFileUrl: URL!
 	public func setImage(fromFileUrl fileUrl: URL) {
-		let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+		if fileUrl == imageFileUrl {
+			return
+		}
+		imageFileUrl = fileUrl
+		
+		let	loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 		loadingView.frame = bounds
 		loadingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-		addSubview(loadingView)
+		loadingView.startAnimating()
+		self.addSubview(loadingView)
 		
-		queue.async {
+		queue.async {			
 			let imageData = UIImage(contentsOfFile: fileUrl.path)
 
 			DispatchQueue.main.async {
@@ -42,7 +49,7 @@ public class AnyAspectImageView: UIView {
 		let blurEffectView = UIVisualEffectView(effect: blurEffect)
 		blurEffectView.frame = bounds
 		blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-		addSubview(blurEffectView)
+		self.addSubview(blurEffectView)
 		
 		let l = CALayer()
 		l.contentsGravity = kCAGravityResizeAspect
@@ -63,8 +70,8 @@ public class AnyAspectImageView: UIView {
 	private func setupImages() {
 		guard let image = image else { return }
 		
-		imageLayer.contents = image.cgImage
-		layer.contents = image.cgImage
+		self.imageLayer.contents = image.cgImage
+		self.layer.contents = image.cgImage
 	}
 	
 }

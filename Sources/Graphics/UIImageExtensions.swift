@@ -69,3 +69,24 @@ public extension UIImage {
 	}
 	
 }
+
+public extension UIImageView {
+	
+	func loadImageAsync(fromFileUrl fileUrl: URL) {
+		let	loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+		loadingView.frame = bounds
+		loadingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		loadingView.startAnimating()
+		self.addSubview(loadingView)
+		
+		DispatchQueue.global().async {
+			let imageData = UIImage(contentsOfFile: fileUrl.path)
+			
+			DispatchQueue.main.async {
+				self.image = imageData
+				loadingView.removeFromSuperview()
+			}
+		}
+	}
+	
+}
