@@ -15,6 +15,8 @@
 		A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */; };
 		A978BC9B20F83EF30011BF84 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A978BC9A20F83EF20011BF84 /* Alerts.swift */; };
 		A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491E520FD56B100F2FDCC /* StringExtensions.swift */; };
+		A99491ED20FD73BE00F2FDCC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491EC20FD73BE00F2FDCC /* CircleView.swift */; };
+		A99491F120FD7DD800F2FDCC /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491F020FD7DD800F2FDCC /* CollectionExtensions.swift */; };
 		A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */; };
 		A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7C820DEFE540096103F /* PathMaker.swift */; };
 		A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */; };
@@ -39,6 +41,8 @@
 		A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyAspectImageView.swift; sourceTree = "<group>"; };
 		A978BC9A20F83EF20011BF84 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		A99491E520FD56B100F2FDCC /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ../../../Xelby/Sources/Foundation/StringExtensions.swift; sourceTree = "<group>"; };
+		A99491EC20FD73BE00F2FDCC /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		A99491F020FD7DD800F2FDCC /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = ../../../Xelby/Sources/Foundation/CollectionExtensions.swift; sourceTree = "<group>"; };
 		A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagePreviewViewController.swift; path = ../../../Xelby/Sources/ViewControllers/ImagePreviewViewController.swift; sourceTree = "<group>"; };
 		A9A2F7C820DEFE540096103F /* PathMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathMaker.swift; sourceTree = "<group>"; };
 		A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationExtensions.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				A9418A7120F40C9300337C8B /* ImageViews */,
 				A9A2F7CD20DEFFB40096103F /* Buttons */,
 				A91F2A4A20F7DEF000CA7B8E /* ArrowView.swift */,
+				A99491EC20FD73BE00F2FDCC /* CircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			children = (
 				A9A2F7D420DF08CD0096103F /* DictionaryExtension.swift */,
 				A99491E520FD56B100F2FDCC /* StringExtensions.swift */,
+				A99491F020FD7DD800F2FDCC /* CollectionExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -283,12 +289,14 @@
 				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
 				A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */,
 				A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */,
+				A99491ED20FD73BE00F2FDCC /* CircleView.swift in Sources */,
 				A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
 				A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */,
 				A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,
+				A99491F120FD7DD800F2FDCC /* CollectionExtensions.swift in Sources */,
 				A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */,
 				A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */,
 			);
