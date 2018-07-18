@@ -13,6 +13,9 @@ public class AnyAspectImageView: UIView {
 	
 	private let queue = DispatchQueue(label: "com.xelby.AnyAspectImageView", qos: DispatchQoS.background)
 	
+	private var imageLayer: CALayer!
+	private var blurEffectView: UIVisualEffectView!
+	
 	@IBInspectable public var image: UIImage? {
 		didSet {
 			setupImages()
@@ -42,29 +45,37 @@ public class AnyAspectImageView: UIView {
 		}
 	}
 	
-	private lazy var imageLayer: CALayer = {
+	public required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		initialize()
+	}
+	
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
+		initialize()
+	}
+	
+	private func initialize() {
 		clipsToBounds = true
 		
 		let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
-		let blurEffectView = UIVisualEffectView(effect: blurEffect)
+		blurEffectView = UIVisualEffectView(effect: blurEffect)
 		blurEffectView.frame = bounds
-		blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		blurEffectView.translatesAutoresizingMaskIntoConstraints = false
 		self.addSubview(blurEffectView)
 		
-		let l = CALayer()
-		l.contentsGravity = kCAGravityResizeAspect
+		imageLayer = CALayer()
+		imageLayer.contentsGravity = kCAGravityResizeAspect
+		imageLayer.frame = layer.bounds
 		layer.contentsGravity = kCAGravityResizeAspectFill
-		layer.addSublayer(l)
-		
-		return l
-	}()
+		layer.addSublayer(imageLayer)
+	}
 	
 	public override func layoutSubviews() {
 		super.layoutSubviews()
 
-		CALayer.performWithoutAnimation {
-			imageLayer.frame = bounds
-		}
+		imageLayer.frame = bounds
+		blurEffectView.frame = bounds
 	}
 	
 	private func setupImages() {
