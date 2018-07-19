@@ -33,13 +33,17 @@ public extension UIColor {
 		self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha) / 255)
 	}
 	
-	func blend(with color: UIColor, coefficient: CGFloat) -> UIColor {
+	func blend(with color: UIColor, coefficient: CGFloat, preserveAlpha: Bool = false) -> UIColor {
 		var components = arrayOfComponents()
 		let otherComponents = color.arrayOfComponents()
 		
 		for i in 0 ..< 4 {
 			let newValue = components[i] + (otherComponents[i] - components[i]) * coefficient
 			components[i] = max(min(newValue, 1.0), 0.0)
+		}
+		
+		if preserveAlpha {
+			components[3] = a
 		}
 		
 		return UIColor(red: components[0], green: components[1], blue: components[2], alpha: components[3])
