@@ -8,7 +8,7 @@
 
 import UIKit
 
-let closureHandlerSelector = Selector("handle")
+let closureHandlerSelector = Selector(("handle"))
 
 public class ClosureHandler <T: AnyObject>: NSObject {
 
