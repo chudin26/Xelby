@@ -68,6 +68,21 @@ public extension UIImage {
 		return normalizedImage
 	}
 	
+	func cropped(byRect rect: CGRect, extendSizeIfNeeded: Bool = false, backgroundColor: UIColor? = nil) -> UIImage {
+		let imageRect = CGRect(origin: .zero, size: size)
+		let rect = extendSizeIfNeeded ? rect : rect.intersection(imageRect)
+		UIGraphicsBeginImageContextWithOptions(rect.size, true, 1.0)
+		
+		let context = UIGraphicsGetCurrentContext()!
+		context.setFillColor(UIColor.white.cgColor)
+		context.fill(CGRect(origin: .zero, size: rect.size))
+		draw(at: CGPoint(-rect.origin.x, -rect.origin.y))
+		
+		let newImage = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		return newImage!
+	}
+	
 }
 
 public extension UIImageView {

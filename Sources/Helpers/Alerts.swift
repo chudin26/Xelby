@@ -2,8 +2,8 @@
 //  Alerts.swift
 //  Xelby
 //
-//  Created by Yuriy Chudin on 29.10.16.
-//  Copyright © 2016 Yuriy Chudin. All rights reserved.
+//  Created by Yuriy Chudin on 29.10.17.
+//  Copyright © 2018 Yuriy Chudin. All rights reserved.
 //
 
 import UIKit
