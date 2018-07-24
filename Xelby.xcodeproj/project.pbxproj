@@ -17,6 +17,7 @@
 		A978BC9B20F83EF30011BF84 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A978BC9A20F83EF20011BF84 /* Alerts.swift */; };
 		A99281F72106711F00254EC6 /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99281F62106711F00254EC6 /* CropView.swift */; };
 		A99281F921067A8600254EC6 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99281F821067A8600254EC6 /* UIView+Layout.swift */; };
+		A992821F2107A70D00254EC6 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992821E2107A70D00254EC6 /* CircleButton.swift */; };
 		A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491E520FD56B100F2FDCC /* StringExtensions.swift */; };
 		A99491ED20FD73BE00F2FDCC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491EC20FD73BE00F2FDCC /* CircleView.swift */; };
 		A99491F120FD7DD800F2FDCC /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491F020FD7DD800F2FDCC /* CollectionExtensions.swift */; };
@@ -46,6 +47,7 @@
 		A978BC9A20F83EF20011BF84 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		A99281F62106711F00254EC6 /* CropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropView.swift; sourceTree = "<group>"; };
 		A99281F821067A8600254EC6 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		A992821E2107A70D00254EC6 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		A99491E520FD56B100F2FDCC /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ../../../Xelby/Sources/Foundation/StringExtensions.swift; sourceTree = "<group>"; };
 		A99491EC20FD73BE00F2FDCC /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		A99491F020FD7DD800F2FDCC /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = ../../../Xelby/Sources/Foundation/CollectionExtensions.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		A9A2F7CD20DEFFB40096103F /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				A992821E2107A70D00254EC6 /* CircleButton.swift */,
 				A9A2F7CE20DEFFC10096103F /* SelectableButton.swift */,
 			);
 			path = Buttons;
@@ -292,6 +295,7 @@
 				A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */,
 				A978BC9B20F83EF30011BF84 /* Alerts.swift in Sources */,
 				A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */,
+				A992821F2107A70D00254EC6 /* CircleButton.swift in Sources */,
 				A908F7D520F0F5A100697A07 /* AnimatorAnimations.swift in Sources */,
 				A9A2F7D520DF08CD0096103F /* DictionaryExtension.swift in Sources */,
 				A99281F72106711F00254EC6 /* CropView.swift in Sources */,

@@ -1,5 +1,9 @@
 //
 //  SelectableButton.swift
+//  Xelby
+//
+//  Created by Yuriy Chudin on 12/07/2018.
+//  Copyright © 2018 chood. All rights reserved.
 //
 
 import UIKit
