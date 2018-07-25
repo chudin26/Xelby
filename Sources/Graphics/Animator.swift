@@ -27,12 +27,14 @@ public class Animator {
 		let type: AnimationType
 		let view: UIView
 		let duration: TimeInterval
+		let curve: CAMediaTimingFunction
 		let delay: TimeInterval
 	}
 	
 	private var animations: [Animation] = []
 	
-	public var defaultDuration: TimeInterval = 0.6
+	public var defaultDuration: TimeInterval = 0.5
+	public var defaultCurve: CAMediaTimingFunction = AnimationCurve.superEaseOut
 	
 	weak var containerView: UIView?
 	
@@ -40,8 +42,12 @@ public class Animator {
 		self.containerView = containerView
 	}
 
-	public func addAnimation(forView view: UIView, type: AnimationType, duration: TimeInterval? = nil, delay: TimeInterval = 0) {
-		let animation = Animation(type: type, view: view, duration: duration ?? defaultDuration, delay: delay)
+	public func addAnimation(forView view: UIView, type: AnimationType, duration: TimeInterval? = nil, curve: CAMediaTimingFunction? = nil, delay: TimeInterval = 0) {
+		let animation = Animation(type: type,
+								  view: view,
+								  duration: duration ?? defaultDuration,
+								  curve: curve ?? defaultCurve,
+								  delay: delay)
 		animations.append(animation)
 	}
 	
@@ -51,7 +57,7 @@ public class Animator {
 			let setToEnd = { anim.type.setToOriginalState(view: anim.view, containerView: self.containerView!) }
 			
 			!reverse ? setToStart() : setToEnd()
-			UIView.animate(withDuration: anim.duration, delay: anim.delay, curve: AnimationCurve.springEaseOut, animations: {
+			UIView.animate(withDuration: anim.duration, delay: anim.delay, curve: anim.curve, animations: {
 				reverse ? setToStart() : setToEnd()
 			}, completion: nil)
 		}

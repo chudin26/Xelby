@@ -49,6 +49,7 @@ public enum AnimationCurve {
 	public static let springEaseIn = CAMediaTimingFunction(controlPoints: 0.6, 0.1, 0.7, -0.45)
 
 	public static let easeOut = CAMediaTimingFunction(controlPoints: 0.3, 1.1, 0.4, 0.9)
+	public static let superEaseOut = CAMediaTimingFunction(controlPoints: 0.0, 1.0, 0.0, 1.0)
 }
 
 extension CAAnimation {
