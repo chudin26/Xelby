@@ -126,7 +126,7 @@ extension ImagePreviewViewController: UIScrollViewDelegate {
 	public func scrollViewDidZoom(_ scrollView: UIScrollView) {
 		let offsetX = max((scrollView.bounds.width - scrollView.contentSize.width) * 0.5, 0)
 		let offsetY = max((scrollView.bounds.height - scrollView.contentSize.height) * 0.5, 0)
-		scrollView.contentInset = UIEdgeInsetsMake(offsetY, offsetX, 0, 0)
+		scrollView.contentInset = UIEdgeInsets(top: offsetY, left: offsetX, bottom: 0, right: 0)
 	}
 	
 }

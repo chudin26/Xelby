@@ -29,7 +29,7 @@ public class AnyAspectImageView: UIView {
 		}
 		imageFileUrl = fileUrl
 		
-		let	loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+		let loadingView = UIActivityIndicatorView(style: .gray)
 		loadingView.frame = bounds
 		loadingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 		loadingView.startAnimating()
@@ -58,16 +58,16 @@ public class AnyAspectImageView: UIView {
 	private func initialize() {
 		clipsToBounds = true
 		
-		let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+		let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
 		blurEffectView = UIVisualEffectView(effect: blurEffect)
 		blurEffectView.frame = bounds
 		blurEffectView.translatesAutoresizingMaskIntoConstraints = false
 		self.addSubview(blurEffectView)
 		
 		imageLayer = CALayer()
-		imageLayer.contentsGravity = kCAGravityResizeAspect
+		imageLayer.contentsGravity = CALayerContentsGravity.resizeAspect
 		imageLayer.frame = layer.bounds
-		layer.contentsGravity = kCAGravityResizeAspectFill
+		layer.contentsGravity = CALayerContentsGravity.resizeAspectFill
 		layer.addSublayer(imageLayer)
 	}
 	

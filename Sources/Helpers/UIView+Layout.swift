@@ -11,7 +11,7 @@ import UIKit
 public extension UIView {
 	
 	@discardableResult
-	func addConstraint(toView: UIView, attribute: NSLayoutAttribute, constant: CGFloat, multiplier: CGFloat = 1) -> NSLayoutConstraint {
+	func addConstraint(toView: UIView, attribute: NSLayoutConstraint.Attribute, constant: CGFloat, multiplier: CGFloat = 1) -> NSLayoutConstraint {
 		let constraint: NSLayoutConstraint
 		if attribute == .width || attribute == .height {
 			constraint = NSLayoutConstraint(item: toView, attribute: attribute, relatedBy: .equal, toItem: nil, attribute: attribute, multiplier: multiplier, constant: constant)
@@ -31,7 +31,7 @@ public extension UIView {
 	}
 	
 	@discardableResult
-	func addConstraint(attribute: NSLayoutAttribute, constant: CGFloat, multiplier: CGFloat = 1) -> NSLayoutConstraint {
+	func addConstraint(attribute: NSLayoutConstraint.Attribute, constant: CGFloat, multiplier: CGFloat = 1) -> NSLayoutConstraint {
 		precondition(attribute == .width || attribute == .height, "Attribute must be NSLayoutAttributeWidth or NSLayoutAttributeHeight")
 		
 		let constraint = NSLayoutConstraint(item: self, attribute: attribute, relatedBy: .equal, toItem: nil, attribute: attribute, multiplier: multiplier, constant: constant)
@@ -40,7 +40,7 @@ public extension UIView {
 		return constraint
 	}
 	
-	func addConstraints(toView view: UIView, attributes: [NSLayoutAttribute: CGFloat]) {
+	func addConstraints(toView view: UIView, attributes: [NSLayoutConstraint.Attribute: CGFloat]) {
 		for attr in attributes {
 			if attr.key == .width || attr.key == .height {
 				view.addConstraint(attribute: attr.key, constant: attr.value)
@@ -51,9 +51,9 @@ public extension UIView {
 	}
 	
 	@discardableResult
-	func addSpacingConstraints(betweenViews views: [UIView], axis: UILayoutConstraintAxis, spacing: CGFloat = 0) -> [NSLayoutConstraint] {
-		let firstAttribute = axis == .horizontal ? NSLayoutAttribute.trailing : NSLayoutAttribute.bottom
-		let secondAttribute = axis == .horizontal ? NSLayoutAttribute.leading : NSLayoutAttribute.top
+	func addSpacingConstraints(betweenViews views: [UIView], axis: NSLayoutConstraint.Axis, spacing: CGFloat = 0) -> [NSLayoutConstraint] {
+        let firstAttribute: NSLayoutConstraint.Attribute = axis == .horizontal ? .trailing : .bottom
+        let secondAttribute: NSLayoutConstraint.Attribute = axis == .horizontal ? .leading : .top
 		
 		var constraints = [NSLayoutConstraint]()
 		for i in 0 ..< views.count - 1 {
@@ -76,7 +76,7 @@ public extension UIView {
 		                              .bottom: margin.bottom])
 	}
 	
-	func addSubview(_ view: UIView, attributes: [NSLayoutAttribute]) {
+	func addSubview(_ view: UIView, attributes: [NSLayoutConstraint.Attribute]) {
 		view.translatesAutoresizingMaskIntoConstraints = false
 		
 		addSubview(view)
@@ -85,7 +85,7 @@ public extension UIView {
 		}
 	}
 
-	func addSubview(_ view: UIView, attributes: [NSLayoutAttribute: CGFloat]) {
+	func addSubview(_ view: UIView, attributes: [NSLayoutConstraint.Attribute: CGFloat]) {
 		if subviews.contains(view) {
 			return
 		}

@@ -88,7 +88,7 @@ public extension UIImage {
 public extension UIImageView {
 	
 	func loadImageAsync(fromFileUrl fileUrl: URL) {
-		let	loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+		let	loadingView = UIActivityIndicatorView(style: .gray)
 		loadingView.frame = bounds
 		loadingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 		loadingView.startAnimating()
