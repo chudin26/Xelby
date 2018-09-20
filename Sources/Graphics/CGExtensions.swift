@@ -8,6 +8,8 @@
 
 import Foundation
 
+public typealias Point = (CGFloat, CGFloat)
+
 public extension CGVector {
 	
 	init(_ dx: CGFloat, _ dy: CGFloat) {
@@ -25,9 +27,13 @@ public extension CGVector {
 	var length: CGFloat {
 		return sqrt(dx * dx + dy * dy)
 	}
+
+	var length2: CGFloat {
+		return dx * dx + dy * dy
+	}
 	
-	func normalized() -> CGVector? {
-		return length == 0 ? nil : self / length
+	func normalized() -> CGVector {
+		return self / length
 	}
 	
 	static func dot(_ v1: CGVector, _ v2: CGVector) -> CGFloat {
@@ -57,6 +63,10 @@ public extension CGVector {
 }
 
 public extension CGPoint {
+
+	init(point: Point) {
+		self.init(x: point.0, y: point.1)
+	}
 	
 	init(_ x: CGFloat, _ y: CGFloat) {
 		self.init(x: x, y: y)

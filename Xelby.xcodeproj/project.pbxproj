@@ -31,6 +31,8 @@
 		A9B281BB20DEECCA00C3B9CD /* Xelby.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B281B920DEECCA00C3B9CD /* Xelby.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B281C920DEEEF600C3B9CD /* CGExtensions.swift */; };
 		A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B281CE20DEF2C600C3B9CD /* UIColorExtensions.swift */; };
+		A9B430F02153D671003A7C78 /* UIBezierPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B430EF2153D671003A7C78 /* UIBezierPathExtensions.swift */; };
+		A9B430FA21540F79003A7C78 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B430F921540F79003A7C78 /* UIImageViewExtensions.swift */; };
 		A9D388BA20FA34F50053C943 /* PanAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388B920FA34F50053C943 /* PanAnimator.swift */; };
 		A9D388BC20FA489B0053C943 /* GestureRecognizerClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388BB20FA489B0053C943 /* GestureRecognizerClosures.swift */; };
 		A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388BD20FA492B0053C943 /* ClosureHandler.swift */; };
@@ -63,6 +65,8 @@
 		A9B281BA20DEECCA00C3B9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9B281C920DEEEF600C3B9CD /* CGExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
 		A9B281CE20DEF2C600C3B9CD /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		A9B430EF2153D671003A7C78 /* UIBezierPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtensions.swift; sourceTree = "<group>"; };
+		A9B430F921540F79003A7C78 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		A9D388B920FA34F50053C943 /* PanAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PanAnimator.swift; path = ../../../../Xelby/Sources/ViewControllers/Animators/PanAnimator.swift; sourceTree = "<group>"; };
 		A9D388BB20FA489B0053C943 /* GestureRecognizerClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GestureRecognizerClosures.swift; path = ../../../Xelby/Sources/Helpers/GestureRecognizerClosures.swift; sourceTree = "<group>"; };
 		A9D388BD20FA492B0053C943 /* ClosureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureHandler.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				A9418A6F20F40C8700337C8B /* AnyAspectImageView.swift */,
+				A9B430F921540F79003A7C78 /* UIImageViewExtensions.swift */,
 			);
 			path = ImageViews;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				A9B281C920DEEEF600C3B9CD /* CGExtensions.swift */,
 				A9B281CE20DEF2C600C3B9CD /* UIColorExtensions.swift */,
 				A9A2F7D020DF02490096103F /* UIImageExtensions.swift */,
+				A9B430EF2153D671003A7C78 /* UIBezierPathExtensions.swift */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -303,12 +309,14 @@
 				A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */,
 				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
 				A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */,
+				A9B430FA21540F79003A7C78 /* UIImageViewExtensions.swift in Sources */,
 				A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */,
 				A99491ED20FD73BE00F2FDCC /* CircleView.swift in Sources */,
 				A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
 				A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */,
 				A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */,
+				A9B430F02153D671003A7C78 /* UIBezierPathExtensions.swift in Sources */,
 				A99281F921067A8600254EC6 /* UIView+Layout.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,

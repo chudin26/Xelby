@@ -14,6 +14,18 @@ public extension UIImage {
 	static func useCoreImage() {
 		ciContext = CIContext(options: nil)
 	}
+
+	static func create(size: CGSize, withDrawingFunc drawingFunc: (CGContext, CGSize) -> ()) -> UIImage {
+		UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+		let context = UIGraphicsGetCurrentContext()!
+
+		drawingFunc(context, size)
+
+		let image = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+
+		return image!
+	}
 	
 	func resized(to lowest: CGFloat) -> UIImage {
 		return resized(to: CGSize(lowest, lowest))
@@ -81,27 +93,6 @@ public extension UIImage {
 		let newImage = UIGraphicsGetImageFromCurrentImageContext()
 		UIGraphicsEndImageContext()
 		return newImage!
-	}
-	
-}
-
-public extension UIImageView {
-	
-	func loadImageAsync(fromFileUrl fileUrl: URL) {
-		let	loadingView = UIActivityIndicatorView(style: .gray)
-		loadingView.frame = bounds
-		loadingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-		loadingView.startAnimating()
-		self.addSubview(loadingView)
-		
-		DispatchQueue.global().async {
-			let imageData = UIImage(contentsOfFile: fileUrl.path)
-			
-			DispatchQueue.main.async {
-				self.image = imageData
-				loadingView.removeFromSuperview()
-			}
-		}
 	}
 	
 }
