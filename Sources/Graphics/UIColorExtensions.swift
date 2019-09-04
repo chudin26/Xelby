@@ -10,12 +10,13 @@ import UIKit
 
 public extension UIColor {
 
-	convenience init(red: Int, green: Int, blue: Int) {
+	convenience init(red: Int, green: Int, blue: Int, alpha: Int = 255) {
 		assert(red >= 0 && red <= 255, "Invalid red component")
 		assert(green >= 0 && green <= 255, "Invalid green component")
 		assert(blue >= 0 && blue <= 255, "Invalid blue component")
+		assert(alpha >= 0 && alpha <= 255, "Invalid alpha component")
 		
-		self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+		self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha) / 255.0)
 	}
 
 	convenience init(hex: UInt32) {
@@ -32,7 +33,7 @@ public extension UIColor {
 		
 		self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha) / 255)
 	}
-	
+
 	func blend(with color: UIColor, coefficient: CGFloat, preserveAlpha: Bool = false) -> UIColor {
 		var components = arrayOfComponents()
 		let otherComponents = color.arrayOfComponents()
@@ -69,4 +70,8 @@ public extension UIColor {
 	var b: CGFloat { return components().blue }
 	var a: CGFloat { return components().alpha }
 	
+	var hex: UInt32 {
+		return UInt32(a * 255) << 24 | UInt32(r * 255) << 16 | UInt32(g * 255) << 8 | UInt32(b * 255)
+	}
+
 }

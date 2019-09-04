@@ -17,7 +17,7 @@ public class GradientView: UIView {
 	@IBInspectable public var startPoint: CGPoint = CGPoint(x: 0, y: 0)
 	@IBInspectable public var endPoint: CGPoint = CGPoint(x: 1, y: 1)
 	
-	override class var layerClass: AnyClass {
+	override public class var layerClass: AnyClass {
 		return CAGradientLayer.self
 	}
 	
@@ -25,13 +25,13 @@ public class GradientView: UIView {
 		return self.layer as! CAGradientLayer
 	}
 	
-	override func prepareForInterfaceBuilder() {
+	override public func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 		
 		setup()
 	}
 	
-	override func awakeFromNib() {
+	override public func awakeFromNib() {
 		super.awakeFromNib()
 		
 		setup()

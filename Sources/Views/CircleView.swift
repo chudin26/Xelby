@@ -17,7 +17,7 @@ public class CircleView: UIView {
 	@IBInspectable public var lineWidth: CGFloat = 1 { didSet { setNeedsDisplay() } }
 	@IBInspectable public var lineDash: CGFloat = 0 { didSet { setNeedsDisplay() } }
 	
-	override func draw(_ rect: CGRect) {
+	override public func draw(_ rect: CGRect) {
 		let ovalRect = rect.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
 		let path = UIBezierPath(ovalIn: ovalRect)
 		

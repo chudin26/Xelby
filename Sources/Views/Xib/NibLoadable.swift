@@ -33,16 +33,16 @@ public extension NibLoadable where Self: UIView {
 	
 }
 
-public class NibView: UIView, NibLoadable {
+open class NibView: UIView, NibLoadable {
 	
-	public func initialize() {}
+	open func initialize() {}
 	
-	required init?(coder aDecoder: NSCoder) {
+	required public init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		setupFromNib()
 	}
 	
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		setupFromNib()
 	}
