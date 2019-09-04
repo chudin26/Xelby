@@ -1,5 +1,5 @@
 //
-//  Dictionary+Additions.swift
+//  DictionaryExtensions.swift
 //  Xelby
 //
 //  Created by Yuriy Chudin on 22.09.16.
@@ -9,17 +9,25 @@
 import Foundation
 
 public extension Dictionary {
+	
+	init(keyValuePairs: [(Key, Value)]) {
+		self.init()
+		
+		for pair in keyValuePairs {
+			self[pair.0] = pair.1
+		}
+	}
 
-	static func + <K, V> (left: Dictionary <K, V>, right: Dictionary <K, V>?) -> Dictionary <K, V> {
+	static func + <K, V> (left: [K: V], right: [K: V]?) -> [K: V] {
 		guard let right = right else { return left }
 		return left.reduce(right) {
-			var new = $0 as [K:V]
+			var new = $0 as [K: V]
 			new.updateValue($1.1, forKey: $1.0)
 			return new
 		}
 	}
 	
-	static func += <K, V> (left: inout Dictionary <K, V>, right: Dictionary <K, V>?) {
+	static func += <K, V> (left: inout [K: V], right: [K: V]?) {
 		guard let right = right else { return }
 		right.forEach { key, value in
 			left.updateValue(value, forKey: key)

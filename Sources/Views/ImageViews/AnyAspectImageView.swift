@@ -8,6 +8,10 @@
 
 import UIKit
 
+//
+// ImageView with blurred image as background for borders
+//
+
 @IBDesignable
 public class AnyAspectImageView: UIView {
 	

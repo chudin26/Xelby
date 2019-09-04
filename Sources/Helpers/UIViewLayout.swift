@@ -1,5 +1,5 @@
 //
-//  UIView+Layout.swift
+//  UIViewLayout.swift
 //  Xelby
 //
 //  Created by Yuriy Chudin on 24/07/2018.

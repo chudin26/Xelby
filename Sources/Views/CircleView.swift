@@ -9,52 +9,33 @@
 import UIKit
 
 @IBDesignable
-class CircleView: UIView {
+public class CircleView: UIView {
 	
-	@IBInspectable var borderWidth: CGFloat = 1 {
-		didSet {
-			update()
+	@IBInspectable public var strokeColor: UIColor? = .white { didSet { setNeedsDisplay() } }
+	@IBInspectable public var fillColor: UIColor? { didSet { setNeedsDisplay() } }
+	
+	@IBInspectable public var lineWidth: CGFloat = 1 { didSet { setNeedsDisplay() } }
+	@IBInspectable public var lineDash: CGFloat = 0 { didSet { setNeedsDisplay() } }
+	
+	override func draw(_ rect: CGRect) {
+		let ovalRect = rect.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
+		let path = UIBezierPath(ovalIn: ovalRect)
+		
+		if lineDash > 0 {
+			path.setLineDash([lineDash, lineDash], count: 2, phase: 0)
 		}
-	}
-	
-	@IBInspectable var borderColor: UIColor = .black {
-		didSet {
-			update()
+		
+		path.lineWidth = lineWidth
+		
+		if let strokeColor = strokeColor {
+			strokeColor.setStroke()
+			path.stroke()
 		}
-	}
-	
-	@IBInspectable var fillColor: UIColor = .clear {
-		didSet {
-			update()
+		
+		if let fillColor = fillColor {
+			fillColor.setFill()
+			path.fill()
 		}
-	}
-	
-	override public class var layerClass: AnyClass {
-		get {
-			return CAShapeLayer.self
-		}
-	}
-	
-	private var shapeLayer: CAShapeLayer {
-		return layer as! CAShapeLayer
-	}
-	
-	override func prepareForInterfaceBuilder() {
-		super.prepareForInterfaceBuilder()
-		update()
-	}
-	
-	override func layoutSubviews() {
-		super.layoutSubviews()
-		update()
-	}
-	
-	private func update() {
-		let path = UIBezierPath(ovalIn: bounds)
-		shapeLayer.path = path.cgPath
-		shapeLayer.strokeColor = borderColor.cgColor
-		shapeLayer.fillColor = fillColor.cgColor
-		shapeLayer.lineWidth = borderWidth
 	}
 	
 }

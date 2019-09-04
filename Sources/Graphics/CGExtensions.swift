@@ -24,6 +24,10 @@ public extension CGVector {
 		self.init(dx: point.x, dy: point.y)
 	}
 	
+	init(size: CGSize) {
+		self.init(dx: size.width, dy: size.height)
+	}
+	
 	var length: CGFloat {
 		return sqrt(dx * dx + dy * dy)
 	}

@@ -9,19 +9,19 @@
 import UIKit
 
 @IBDesignable
-class BorderView: UIView {
+public class BorderView: UIView {
 	
-	@IBInspectable var borderColor: UIColor {
-		get { return UIColor(cgColor: layer.borderColor!) }
+	@IBInspectable public var borderColor: UIColor {
+		get { return layer.borderColor != nil ? UIColor(cgColor: layer.borderColor!) : UIColor.clear }
 		set { layer.borderColor = newValue.cgColor }
 	}
 	
-	@IBInspectable var borderWidth: CGFloat {
+	@IBInspectable public var borderWidth: CGFloat {
 		get { return layer.borderWidth }
 		set { layer.borderWidth = newValue }
 	}
-
-	@IBInspectable var borderRadius: CGFloat {
+	
+	@IBInspectable public var borderRadius: CGFloat {
 		get { return layer.cornerRadius }
 		set { layer.cornerRadius = newValue }
 	}
