@@ -10,7 +10,7 @@ import UIKit
 
 public extension CALayer {
 
-	public class func animate(duration: CFTimeInterval, curve: CAMediaTimingFunction? = nil, animations: () -> ()) {
+	class func animate(duration: CFTimeInterval, curve: CAMediaTimingFunction? = nil, animations: () -> ()) {
 		CATransaction.begin()
 		CATransaction.setAnimationDuration(duration)
 		CATransaction.setAnimationTimingFunction(curve)
@@ -20,7 +20,7 @@ public extension CALayer {
 		CATransaction.commit()
 	}
 	
-	public class func performWithoutAnimation(_ actions: () -> Void) {
+	class func performWithoutAnimation(_ actions: () -> Void) {
 		CATransaction.begin()
 		CATransaction.setDisableActions(true)
 		
@@ -33,7 +33,7 @@ public extension CALayer {
 
 public extension UIView {
 	
-	public class func animate(withDuration duration: TimeInterval, delay: TimeInterval = 0, curve: CAMediaTimingFunction, animations: @escaping () -> (), completion: ((Bool) -> Void)? = nil) {
+	class func animate(withDuration duration: TimeInterval, delay: TimeInterval = 0, curve: CAMediaTimingFunction, animations: @escaping () -> (), completion: ((Bool) -> Void)? = nil) {
 		CATransaction.begin()
 		CATransaction.setAnimationTimingFunction(curve)
 
