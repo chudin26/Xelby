@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72287AAE233B8D7700137402 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72287AAD233B8D7700137402 /* DIContainer.swift */; };
 		723CE541231FB224001E088C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE540231FB224001E088C /* UIViewExtensions.swift */; };
 		723CE54C231FB558001E088C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE54B231FB558001E088C /* XibView.swift */; };
 		723CE54E231FB594001E088C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE54D231FB594001E088C /* GradientView.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72287AAD233B8D7700137402 /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		723CE540231FB224001E088C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		723CE54B231FB558001E088C /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		723CE54D231FB594001E088C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		A9A2F7E420DF4CD80096103F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				72287AAD233B8D7700137402 /* DIContainer.swift */,
 				723CE54F231FB623001E088C /* Presentable.swift */,
 				723CE551231FBA1C001E088C /* Coordinator.swift */,
 			);
@@ -304,6 +307,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 			);
 			mainGroup = A9B281AC20DEECCA00C3B9CD;
@@ -367,6 +371,7 @@
 				A99491F120FD7DD800F2FDCC /* CollectionExtensions.swift in Sources */,
 				A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */,
 				723CE54C231FB558001E088C /* XibView.swift in Sources */,
+				72287AAE233B8D7700137402 /* DIContainer.swift in Sources */,
 				A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
