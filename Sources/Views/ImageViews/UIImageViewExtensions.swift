@@ -26,5 +26,13 @@ public extension UIImageView {
 			}
 		}
 	}
+	
+	func setImageFromBase64(dataString: String) {
+		if let url = URL(string: dataString),
+			let imageData = try? Data(contentsOf: url),
+			let image = UIImage(data: imageData) {
+			self.image = image
+		}
+	}
 
 }
