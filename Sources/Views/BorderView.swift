@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class BorderView: UIView {
+open class BorderView: UIView {
 	
 	@IBInspectable public var borderColor: UIColor {
 		get { return layer.borderColor != nil ? UIColor(cgColor: layer.borderColor!) : UIColor.clear }

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class CircleView: UIView {
+open class CircleView: UIView {
 	
 	@IBInspectable public var strokeColor: UIColor? = .white { didSet { setNeedsDisplay() } }
 	@IBInspectable public var fillColor: UIColor? { didSet { setNeedsDisplay() } }

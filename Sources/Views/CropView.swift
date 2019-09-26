@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class CropView: BorderView {
+open class CropView: BorderView {
 
 	// The length of corner's tick
 	@IBInspectable var cornerRadius: CGFloat = 10 {
@@ -31,12 +31,12 @@ class CropView: BorderView {
 		setup()
 	}
 	
-	required init?(coder aDecoder: NSCoder) {
+	required public init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		setup()
 	}
 	
-	override func prepareForInterfaceBuilder() {
+	override open func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 		
 		setup()
@@ -48,7 +48,7 @@ class CropView: BorderView {
 		layer.addSublayer(cornersLayer)
 	}
 
-	override func layoutSubviews() {
+	override open func layoutSubviews() {
 		super.layoutSubviews()
 		
 		recalculateShape()
