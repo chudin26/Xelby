@@ -34,7 +34,7 @@ public class Animator {
 	private var animations: [Animation] = []
 	
 	public var defaultDuration: TimeInterval = 0.5
-	public var defaultCurve: CAMediaTimingFunction = AnimationCurve.superEaseOut
+	public var defaultCurve: CAMediaTimingFunction = AnimationCurves.superEaseOut
 	
 	weak var containerView: UIView?
 	
