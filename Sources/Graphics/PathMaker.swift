@@ -48,9 +48,7 @@ public class PathMaker {
 	
 	public func makeCutCornersRect(corners: [Corner: CGFloat], defaultCornerRadius: CGFloat! = nil) -> UIBezierPath {
 		let minRadius = min(size.height / 2, size.width / 2)
-		let radiuses = Corner.all().mapToDictionary {
-			(key: $0, value: min(corners[$0] ?? defaultCornerRadius, minRadius))
-		}
+		let radiuses = Dictionary(keyValuePairs: Corner.all().map { ($0, min(corners[$0] ?? defaultCornerRadius, minRadius)) })
 		
 		let path = UIBezierPath()
 		path.move(to: CGPoint(radiuses[.leftTop]!, 0))

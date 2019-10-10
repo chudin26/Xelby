@@ -32,7 +32,6 @@
 		A992821F2107A70D00254EC6 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992821E2107A70D00254EC6 /* CircleButton.swift */; };
 		A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491E520FD56B100F2FDCC /* StringExtensions.swift */; };
 		A99491ED20FD73BE00F2FDCC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491EC20FD73BE00F2FDCC /* CircleView.swift */; };
-		A99491F120FD7DD800F2FDCC /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491F020FD7DD800F2FDCC /* CollectionExtensions.swift */; };
 		A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */; };
 		A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7C820DEFE540096103F /* PathMaker.swift */; };
 		A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */; };
@@ -76,7 +75,6 @@
 		A992821E2107A70D00254EC6 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		A99491E520FD56B100F2FDCC /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ../../../Xelby/Sources/Foundation/StringExtensions.swift; sourceTree = "<group>"; };
 		A99491EC20FD73BE00F2FDCC /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		A99491F020FD7DD800F2FDCC /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = ../../../Xelby/Sources/Foundation/CollectionExtensions.swift; sourceTree = "<group>"; };
 		A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagePreviewViewController.swift; path = ../../../Xelby/Sources/ViewControllers/ImagePreviewViewController.swift; sourceTree = "<group>"; };
 		A9A2F7C820DEFE540096103F /* PathMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathMaker.swift; sourceTree = "<group>"; };
 		A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationExtensions.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 			children = (
 				A9A2F7D420DF08CD0096103F /* DictionaryExtensions.swift */,
 				A99491E520FD56B100F2FDCC /* StringExtensions.swift */,
-				A99491F020FD7DD800F2FDCC /* CollectionExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -384,7 +381,6 @@
 				A99281F921067A8600254EC6 /* UIViewLayout.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,
-				A99491F120FD7DD800F2FDCC /* CollectionExtensions.swift in Sources */,
 				A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */,
 				723CE54C231FB558001E088C /* XibView.swift in Sources */,
 				72287AAE233B8D7700137402 /* DIContainer.swift in Sources */,
