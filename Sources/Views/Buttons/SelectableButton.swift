@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class SelectableButton: UIButton {
+open class SelectableButton: UIButton {
 
 	@IBInspectable public var borderColor: UIColor? {
 		didSet {
@@ -40,7 +40,6 @@ public class SelectableButton: UIButton {
 		l.backgroundColor = UIColor(white: 0.0, alpha: 0.3).cgColor
 		l.opacity = 0.0
 		self.layer.addSublayer(l)
-		self.layer.masksToBounds = true
 		
 		return l
 	}()
@@ -61,10 +60,11 @@ public class SelectableButton: UIButton {
 		}
 	}
 	
-	override public func layoutSubviews() {
+	override open func layoutSubviews() {
 		super.layoutSubviews()
 		
 		darkeningLayer.frame = bounds
+		darkeningLayer.cornerRadius = cornerRadius
 	}
 	
 	private func setPressState(state: Bool) {

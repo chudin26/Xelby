@@ -9,21 +9,21 @@
 import UIKit
 
 @IBDesignable
-class CircleButton: SelectableButton {
+open class CircleButton: SelectableButton {
 
 	func setup() {
 		cornerRadius = bounds.height / 2
 	}
 	
-	override func awakeFromNib() {
+	open override func awakeFromNib() {
 		setup()
 	}
 	
-	override func prepareForInterfaceBuilder() {
+	open override func prepareForInterfaceBuilder() {
 		setup()
 	}
 	
-	override func layoutSubviews() {
+	open override func layoutSubviews() {
 		super.layoutSubviews()
 		
 		setup()
