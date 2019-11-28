@@ -10,13 +10,13 @@ import UIKit
 
 public extension UIColor {
 
-	convenience init(red: Int, green: Int, blue: Int, alpha: Int = 255) {
-		assert(red >= 0 && red <= 255, "Invalid red component")
-		assert(green >= 0 && green <= 255, "Invalid green component")
-		assert(blue >= 0 && blue <= 255, "Invalid blue component")
-		assert(alpha >= 0 && alpha <= 255, "Invalid alpha component")
+	convenience init(r: Int, g: Int, b: Int, a: Int = 255) {
+		assert(r >= 0 && r <= 255, "Invalid red component")
+		assert(g >= 0 && g <= 255, "Invalid green component")
+		assert(b >= 0 && b <= 255, "Invalid blue component")
+		assert(a >= 0 && a <= 255, "Invalid alpha component")
 		
-		self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha) / 255.0)
+		self.init(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(a) / 255.0)
 	}
 
 	convenience init(hex: UInt32) {

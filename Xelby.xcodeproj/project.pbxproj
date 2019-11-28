@@ -17,6 +17,11 @@
 		723CE556231FBA96001E088C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE555231FBA96001E088C /* NibLoadable.swift */; };
 		723CE55C231FBBEA001E088C /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE55B231FBBEA001E088C /* WeakArray.swift */; };
 		723CE55E231FBC13001E088C /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE55D231FBC13001E088C /* WeakRef.swift */; };
+		729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */; };
+		729BAFBD238D28A700F2E424 /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBC238D28A700F2E424 /* AttributedButton.swift */; };
+		729BAFBF238E8E6A00F2E424 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBE238E8E6A00F2E424 /* Validator.swift */; };
+		729BAFC2238E9E9300F2E424 /* ValidationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFC1238E9E9300F2E424 /* ValidationTextField.swift */; };
+		729BAFC4238E9EB600F2E424 /* StringValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFC3238E9EB600F2E424 /* StringValidators.swift */; };
 		72C652882359B8610031B882 /* UIControlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C652872359B8610031B882 /* UIControlHandler.swift */; };
 		72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFCB9323618DBE004BD05D /* RangeExtensions.swift */; };
 		72F53AB3233CECC000C52753 /* UIViewFadeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */; };
@@ -62,6 +67,11 @@
 		723CE555231FBA96001E088C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		723CE55B231FBBEA001E088C /* WeakArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
 		723CE55D231FBC13001E088C /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
+		729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
+		729BAFBC238D28A700F2E424 /* AttributedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
+		729BAFBE238E8E6A00F2E424 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		729BAFC1238E9E9300F2E424 /* ValidationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTextField.swift; sourceTree = "<group>"; };
+		729BAFC3238E9EB600F2E424 /* StringValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidators.swift; sourceTree = "<group>"; };
 		72C652872359B8610031B882 /* UIControlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlHandler.swift; sourceTree = "<group>"; };
 		72CFCB9323618DBE004BD05D /* RangeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
 		72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFadeAnimations.swift; sourceTree = "<group>"; };
@@ -118,6 +128,15 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
+		729BAFC0238E9E7100F2E424 /* ValidationTextField */ = {
+			isa = PBXGroup;
+			children = (
+				729BAFC1238E9E9300F2E424 /* ValidationTextField.swift */,
+				729BAFC3238E9EB600F2E424 /* StringValidators.swift */,
+			);
+			path = ValidationTextField;
+			sourceTree = "<group>";
+		};
 		72F53AB4233D414500C52753 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +185,7 @@
 		A9A2F7CC20DEFFAF0096103F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				729BAFC0238E9E7100F2E424 /* ValidationTextField */,
 				723CE54A231FB54C001E088C /* Xib */,
 				A9418A7120F40C9300337C8B /* ImageViews */,
 				A9A2F7CD20DEFFB40096103F /* Buttons */,
@@ -178,6 +198,7 @@
 				A94DB03D210272DC00D6A99D /* BorderView.swift */,
 				A99281F62106711F00254EC6 /* CropView.swift */,
 				723CE54D231FB594001E088C /* GradientView.swift */,
+				729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +206,7 @@
 		A9A2F7CD20DEFFB40096103F /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				729BAFBC238D28A700F2E424 /* AttributedButton.swift */,
 				A992821E2107A70D00254EC6 /* CircleButton.swift */,
 				A9A2F7CE20DEFFC10096103F /* SelectableButton.swift */,
 			);
@@ -207,6 +229,7 @@
 				72287AAD233B8D7700137402 /* DIContainer.swift */,
 				723CE54F231FB623001E088C /* Presentable.swift */,
 				723CE551231FBA1C001E088C /* Coordinator.swift */,
+				729BAFBE238E8E6A00F2E424 /* Validator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -354,6 +377,7 @@
 			files = (
 				A9D388BA20FA34F50053C943 /* PanAnimator.swift in Sources */,
 				723CE550231FB623001E088C /* Presentable.swift in Sources */,
+				729BAFC2238E9E9300F2E424 /* ValidationTextField.swift in Sources */,
 				A908F7D320F0F56300697A07 /* Animator.swift in Sources */,
 				723CE554231FBA60001E088C /* UIViewInstantiate.swift in Sources */,
 				A94DB03E210272DD00D6A99D /* BorderView.swift in Sources */,
@@ -373,7 +397,9 @@
 				72C652882359B8610031B882 /* UIControlHandler.swift in Sources */,
 				A9B430FA21540F79003A7C78 /* UIImageViewExtensions.swift in Sources */,
 				A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */,
+				729BAFBF238E8E6A00F2E424 /* Validator.swift in Sources */,
 				723CE552231FBA1C001E088C /* Coordinator.swift in Sources */,
+				729BAFBD238D28A700F2E424 /* AttributedButton.swift in Sources */,
 				A99491ED20FD73BE00F2FDCC /* CircleView.swift in Sources */,
 				A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
@@ -384,6 +410,7 @@
 				723CE55C231FBBEA001E088C /* WeakArray.swift in Sources */,
 				A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */,
 				A9B430F02153D671003A7C78 /* UIBezierPathExtensions.swift in Sources */,
+				729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */,
 				723CE541231FB224001E088C /* UIViewExtensions.swift in Sources */,
 				A99281F921067A8600254EC6 /* UIViewLayout.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
@@ -391,6 +418,7 @@
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,
 				A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */,
 				723CE54C231FB558001E088C /* XibView.swift in Sources */,
+				729BAFC4238E9EB600F2E424 /* StringValidators.swift in Sources */,
 				72287AAE233B8D7700137402 /* DIContainer.swift in Sources */,
 				A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */,
 			);
