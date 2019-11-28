@@ -30,7 +30,7 @@ open class ValidationTextField: UITextField, UITextFieldDelegate {
 	
 	private var bottomLine: UIView!
 				
-	override public func prepareForInterfaceBuilder() {
+	open override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 		setup()
 	}

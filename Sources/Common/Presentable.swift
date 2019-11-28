@@ -16,30 +16,30 @@ public enum PresentStyle {
 public protocol Presenting {
 	associatedtype Presentable
 	
-	func present(_ presentable: Presentable, presentStyle: PresentStyle)
-	func dismiss(_ presentable: Presentable, presentStyle: PresentStyle)
+	func present(_ presentable: Presentable, presentStyle: PresentStyle, animated: Bool)
+	func dismiss(_ presentable: Presentable, presentStyle: PresentStyle, animated: Bool)
 }
 
 extension UIViewController: Presenting {
 	
-	public func present(_ presentable: UIViewController, presentStyle: PresentStyle) {
+	public func present(_ presentable: UIViewController, presentStyle: PresentStyle, animated: Bool) {
 		switch presentStyle {
 		case .present:
-			self.present(presentable, animated: true, completion: nil)
+			self.present(presentable, animated: animated, completion: nil)
 			
 		case .push:
-			self.navigationController?.pushViewController(presentable, animated: true)
+			self.navigationController?.pushViewController(presentable, animated: animated)
 		}
 		
 	}
 	
-	public func dismiss(_ presentable: UIViewController, presentStyle: PresentStyle) {
+	public func dismiss(_ presentable: UIViewController, presentStyle: PresentStyle, animated: Bool) {
 		switch presentStyle {
 		case .present:
-			dismiss(animated: true, completion: nil)
+			dismiss(animated: animated, completion: nil)
 			
 		case .push:
-			self.navigationController?.popViewController(animated: true)
+			self.navigationController?.popViewController(animated: animated)
 		}
 	}
 	
