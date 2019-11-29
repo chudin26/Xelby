@@ -17,6 +17,7 @@
 		723CE556231FBA96001E088C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE555231FBA96001E088C /* NibLoadable.swift */; };
 		723CE55C231FBBEA001E088C /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE55B231FBBEA001E088C /* WeakArray.swift */; };
 		723CE55E231FBC13001E088C /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE55D231FBC13001E088C /* WeakRef.swift */; };
+		7280D67F239114E000174692 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280D67E239114E000174692 /* CapsuleView.swift */; };
 		729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */; };
 		729BAFBD238D28A700F2E424 /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBC238D28A700F2E424 /* AttributedButton.swift */; };
 		729BAFBF238E8E6A00F2E424 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBE238E8E6A00F2E424 /* Validator.swift */; };
@@ -24,6 +25,7 @@
 		729BAFC4238E9EB600F2E424 /* StringValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFC3238E9EB600F2E424 /* StringValidators.swift */; };
 		72C652882359B8610031B882 /* UIControlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C652872359B8610031B882 /* UIControlHandler.swift */; };
 		72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFCB9323618DBE004BD05D /* RangeExtensions.swift */; };
+		72DFF34C2391786A003BEC7A /* SelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */; };
 		72F53AB3233CECC000C52753 /* UIViewFadeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */; };
 		72F53AB6233D416700C52753 /* AnimationCurves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F53AB5233D416700C52753 /* AnimationCurves.swift */; };
 		A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */; };
@@ -38,7 +40,7 @@
 		A99281F921067A8600254EC6 /* UIViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99281F821067A8600254EC6 /* UIViewLayout.swift */; };
 		A992821F2107A70D00254EC6 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992821E2107A70D00254EC6 /* CircleButton.swift */; };
 		A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491E520FD56B100F2FDCC /* StringExtensions.swift */; };
-		A99491ED20FD73BE00F2FDCC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491EC20FD73BE00F2FDCC /* CircleView.swift */; };
+		A99491ED20FD73BE00F2FDCC /* EllipseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99491EC20FD73BE00F2FDCC /* EllipseView.swift */; };
 		A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */; };
 		A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7C820DEFE540096103F /* PathMaker.swift */; };
 		A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */; };
@@ -67,6 +69,7 @@
 		723CE555231FBA96001E088C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		723CE55B231FBBEA001E088C /* WeakArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
 		723CE55D231FBC13001E088C /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
+		7280D67E239114E000174692 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
 		729BAFBC238D28A700F2E424 /* AttributedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
 		729BAFBE238E8E6A00F2E424 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		729BAFC3238E9EB600F2E424 /* StringValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidators.swift; sourceTree = "<group>"; };
 		72C652872359B8610031B882 /* UIControlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlHandler.swift; sourceTree = "<group>"; };
 		72CFCB9323618DBE004BD05D /* RangeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
+		72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTableViewCell.swift; sourceTree = "<group>"; };
 		72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFadeAnimations.swift; sourceTree = "<group>"; };
 		72F53AB5233D416700C52753 /* AnimationCurves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurves.swift; sourceTree = "<group>"; };
 		A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +92,7 @@
 		A99281F821067A8600254EC6 /* UIViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLayout.swift; sourceTree = "<group>"; };
 		A992821E2107A70D00254EC6 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		A99491E520FD56B100F2FDCC /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ../../../Xelby/Sources/Foundation/StringExtensions.swift; sourceTree = "<group>"; };
-		A99491EC20FD73BE00F2FDCC /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		A99491EC20FD73BE00F2FDCC /* EllipseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipseView.swift; sourceTree = "<group>"; };
 		A9A0E77820F69D3F00533BB9 /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagePreviewViewController.swift; path = ../../../Xelby/Sources/ViewControllers/ImagePreviewViewController.swift; sourceTree = "<group>"; };
 		A9A2F7C820DEFE540096103F /* PathMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathMaker.swift; sourceTree = "<group>"; };
 		A9A2F7CA20DEFF030096103F /* AnimationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationExtensions.swift; sourceTree = "<group>"; };
@@ -194,11 +198,13 @@
 				72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */,
 				72C652872359B8610031B882 /* UIControlHandler.swift */,
 				A91F2A4A20F7DEF000CA7B8E /* ArrowView.swift */,
-				A99491EC20FD73BE00F2FDCC /* CircleView.swift */,
+				A99491EC20FD73BE00F2FDCC /* EllipseView.swift */,
 				A94DB03D210272DC00D6A99D /* BorderView.swift */,
 				A99281F62106711F00254EC6 /* CropView.swift */,
 				723CE54D231FB594001E088C /* GradientView.swift */,
 				729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */,
+				7280D67E239114E000174692 /* CapsuleView.swift */,
+				72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,12 +406,13 @@
 				729BAFBF238E8E6A00F2E424 /* Validator.swift in Sources */,
 				723CE552231FBA1C001E088C /* Coordinator.swift in Sources */,
 				729BAFBD238D28A700F2E424 /* AttributedButton.swift in Sources */,
-				A99491ED20FD73BE00F2FDCC /* CircleView.swift in Sources */,
+				A99491ED20FD73BE00F2FDCC /* EllipseView.swift in Sources */,
 				A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
 				A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */,
 				723CE55E231FBC13001E088C /* WeakRef.swift in Sources */,
 				723CE556231FBA96001E088C /* NibLoadable.swift in Sources */,
+				72DFF34C2391786A003BEC7A /* SelectableTableViewCell.swift in Sources */,
 				723CE54E231FB594001E088C /* GradientView.swift in Sources */,
 				723CE55C231FBBEA001E088C /* WeakArray.swift in Sources */,
 				A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */,
@@ -419,6 +426,7 @@
 				A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */,
 				723CE54C231FB558001E088C /* XibView.swift in Sources */,
 				729BAFC4238E9EB600F2E424 /* StringValidators.swift in Sources */,
+				7280D67F239114E000174692 /* CapsuleView.swift in Sources */,
 				72287AAE233B8D7700137402 /* DIContainer.swift in Sources */,
 				A9A2F7C920DEFE540096103F /* PathMaker.swift in Sources */,
 			);

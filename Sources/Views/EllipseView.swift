@@ -1,5 +1,5 @@
 //
-//  CircleView.swift
+//  EllipseView.swift
 //  Xelby
 //
 //  Created by Yuriy Chudin on 17.07.18.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-open class CircleView: UIView {
+open class EllipseView: UIView {
 	
 	@IBInspectable public var strokeColor: UIColor? = .white { didSet { setNeedsDisplay() } }
 	@IBInspectable public var fillColor: UIColor? { didSet { setNeedsDisplay() } }
