@@ -26,6 +26,7 @@
 		72C652882359B8610031B882 /* UIControlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C652872359B8610031B882 /* UIControlHandler.swift */; };
 		72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFCB9323618DBE004BD05D /* RangeExtensions.swift */; };
 		72DFF34C2391786A003BEC7A /* SelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */; };
+		72DFF3572397B625003BEC7A /* SelfRemovableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFF3562397B625003BEC7A /* SelfRemovableView.swift */; };
 		72F53AB3233CECC000C52753 /* UIViewFadeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */; };
 		72F53AB6233D416700C52753 /* AnimationCurves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F53AB5233D416700C52753 /* AnimationCurves.swift */; };
 		A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */; };
@@ -78,6 +79,7 @@
 		72C652872359B8610031B882 /* UIControlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlHandler.swift; sourceTree = "<group>"; };
 		72CFCB9323618DBE004BD05D /* RangeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
 		72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTableViewCell.swift; sourceTree = "<group>"; };
+		72DFF3562397B625003BEC7A /* SelfRemovableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfRemovableView.swift; sourceTree = "<group>"; };
 		72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFadeAnimations.swift; sourceTree = "<group>"; };
 		72F53AB5233D416700C52753 /* AnimationCurves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurves.swift; sourceTree = "<group>"; };
 		A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */,
 				7280D67E239114E000174692 /* CapsuleView.swift */,
 				72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */,
+				72DFF3562397B625003BEC7A /* SelfRemovableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				A94DB03E210272DD00D6A99D /* BorderView.swift in Sources */,
 				A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */,
 				A978BC9B20F83EF30011BF84 /* Alerts.swift in Sources */,
+				72DFF3572397B625003BEC7A /* SelfRemovableView.swift in Sources */,
 				A9B281CF20DEF2C600C3B9CD /* UIColorExtensions.swift in Sources */,
 				72F53AB6233D416700C52753 /* AnimationCurves.swift in Sources */,
 				A992821F2107A70D00254EC6 /* CircleButton.swift in Sources */,
