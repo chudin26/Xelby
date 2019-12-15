@@ -17,7 +17,7 @@ public protocol Presenting {
 	associatedtype Presentable
 	
 	func present(_ presentable: Presentable, presentStyle: PresentStyle, animated: Bool)
-	func dismiss(_ presentable: Presentable, presentStyle: PresentStyle, animated: Bool)
+	func dismiss(presentStyle: PresentStyle, animated: Bool)
 }
 
 extension UIViewController: Presenting {
@@ -33,7 +33,7 @@ extension UIViewController: Presenting {
 		
 	}
 	
-	public func dismiss(_ presentable: UIViewController, presentStyle: PresentStyle, animated: Bool) {
+	public func dismiss(presentStyle: PresentStyle, animated: Bool) {
 		switch presentStyle {
 		case .present:
 			dismiss(animated: animated, completion: nil)
