@@ -12,7 +12,7 @@ public class Validator <Value, Error> {
 	
 	public typealias ValidationFunc = (Value) -> [Error]?
 	
-	internal var validationFunc: ValidationFunc
+	public private (set) var validationFunc: ValidationFunc
 	
 	public init(_ f: @escaping ValidationFunc) {
 		validationFunc = f
