@@ -14,4 +14,11 @@ public extension String {
 		return NSLocalizedString(self, comment: "")
 	}
 	
+	subscript (i: Int) -> Character
+    {
+        get {
+			return self[self.index(self.startIndex, offsetBy: i)]
+        }
+    }
+		
 }
