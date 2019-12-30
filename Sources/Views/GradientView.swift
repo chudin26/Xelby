@@ -11,11 +11,11 @@ import UIKit
 @IBDesignable
 open class GradientView: UIView {
 	
-	@IBInspectable public var startColor: UIColor! = UIColor(white: 0.0, alpha: 1.0)
-	@IBInspectable public var endColor: UIColor! = UIColor(white: 1.0, alpha: 1.0)
+	@IBInspectable public var startColor: UIColor! = UIColor(white: 0.0, alpha: 1.0) { didSet { setup() }}
+	@IBInspectable public var endColor: UIColor! = UIColor(white: 1.0, alpha: 1.0) { didSet { setup() }}
 	
-	@IBInspectable public var startPoint: CGPoint = CGPoint(x: 0, y: 0)
-	@IBInspectable public var endPoint: CGPoint = CGPoint(x: 1, y: 1)
+	@IBInspectable public var startPoint: CGPoint = CGPoint(x: 0, y: 0) { didSet { setup() }}
+	@IBInspectable public var endPoint: CGPoint = CGPoint(x: 1, y: 1) { didSet { setup() }}
 	
 	override public class var layerClass: AnyClass {
 		return CAGradientLayer.self
@@ -25,18 +25,26 @@ open class GradientView: UIView {
 		return self.layer as! CAGradientLayer
 	}
 	
+	
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
+		setup()
+	}
+	
+	required public init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
 	override public func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
-		
 		setup()
 	}
 	
 	override public func awakeFromNib() {
 		super.awakeFromNib()
-		
 		setup()
 	}
-	
+		
 	private func setup() {
 		gradientLayer.startPoint = startPoint
 		gradientLayer.endPoint = endPoint
