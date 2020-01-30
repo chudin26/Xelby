@@ -17,6 +17,11 @@
 		723CE556231FBA96001E088C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE555231FBA96001E088C /* NibLoadable.swift */; };
 		723CE55C231FBBEA001E088C /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE55B231FBBEA001E088C /* WeakArray.swift */; };
 		723CE55E231FBC13001E088C /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE55D231FBC13001E088C /* WeakRef.swift */; };
+		7279965C23D780C500FB9779 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279965B23D780C500FB9779 /* Line.swift */; };
+		7279965F23D7867E00FB9779 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279965E23D7867E00FB9779 /* Vector.swift */; };
+		7279966123D7890B00FB9779 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279966023D7890B00FB9779 /* Rectangle.swift */; };
+		7279966E23D8E4D200FB9779 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279966D23D8E4D200FB9779 /* Point.swift */; };
+		7279967223D8E90E00FB9779 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279967123D8E90E00FB9779 /* Size.swift */; };
 		7280D67F239114E000174692 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280D67E239114E000174692 /* CapsuleView.swift */; };
 		729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */; };
 		729BAFBD238D28A700F2E424 /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBC238D28A700F2E424 /* AttributedButton.swift */; };
@@ -70,6 +75,11 @@
 		723CE555231FBA96001E088C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		723CE55B231FBBEA001E088C /* WeakArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
 		723CE55D231FBC13001E088C /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
+		7279965B23D780C500FB9779 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		7279965E23D7867E00FB9779 /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		7279966023D7890B00FB9779 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		7279966D23D8E4D200FB9779 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		7279967123D8E90E00FB9779 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		7280D67E239114E000174692 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
 		729BAFBC238D28A700F2E424 /* AttributedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
@@ -132,6 +142,18 @@
 				723CE555231FBA96001E088C /* NibLoadable.swift */,
 			);
 			path = Xib;
+			sourceTree = "<group>";
+		};
+		7279965D23D7818900FB9779 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				7279965B23D780C500FB9779 /* Line.swift */,
+				7279965E23D7867E00FB9779 /* Vector.swift */,
+				7279966023D7890B00FB9779 /* Rectangle.swift */,
+				7279966D23D8E4D200FB9779 /* Point.swift */,
+				7279967123D8E90E00FB9779 /* Size.swift */,
+			);
+			path = Math;
 			sourceTree = "<group>";
 		};
 		729BAFC0238E9E7100F2E424 /* ValidationTextField */ = {
@@ -273,6 +295,7 @@
 		A9B281C720DEEE2C00C3B9CD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7279965D23D7818900FB9779 /* Math */,
 				A9A2F7E420DF4CD80096103F /* Common */,
 				A91F2A5820F8135000CA7B8E /* Helpers */,
 				A9A2F7D320DF08BF0096103F /* Foundation */,
@@ -387,6 +410,8 @@
 				A9D388BA20FA34F50053C943 /* PanAnimator.swift in Sources */,
 				723CE550231FB623001E088C /* Presentable.swift in Sources */,
 				729BAFC2238E9E9300F2E424 /* ValidationTextField.swift in Sources */,
+				7279966123D7890B00FB9779 /* Rectangle.swift in Sources */,
+				7279967223D8E90E00FB9779 /* Size.swift in Sources */,
 				A908F7D320F0F56300697A07 /* Animator.swift in Sources */,
 				723CE554231FBA60001E088C /* UIViewInstantiate.swift in Sources */,
 				A94DB03E210272DD00D6A99D /* BorderView.swift in Sources */,
@@ -413,6 +438,7 @@
 				A99491ED20FD73BE00F2FDCC /* EllipseView.swift in Sources */,
 				A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
+				7279965C23D780C500FB9779 /* Line.swift in Sources */,
 				A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */,
 				723CE55E231FBC13001E088C /* WeakRef.swift in Sources */,
 				723CE556231FBA96001E088C /* NibLoadable.swift in Sources */,
@@ -422,7 +448,9 @@
 				A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */,
 				A9B430F02153D671003A7C78 /* UIBezierPathExtensions.swift in Sources */,
 				729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */,
+				7279966E23D8E4D200FB9779 /* Point.swift in Sources */,
 				723CE541231FB224001E088C /* UIViewExtensions.swift in Sources */,
+				7279965F23D7867E00FB9779 /* Vector.swift in Sources */,
 				A99281F921067A8600254EC6 /* UIViewLayout.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */,
