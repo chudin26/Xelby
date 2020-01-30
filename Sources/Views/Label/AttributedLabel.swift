@@ -12,6 +12,7 @@ import UIKit
 public class AttributedLabel: UILabel {
 	
 	@IBInspectable public var spacing: CGFloat = 0
+	@IBInspectable public var underline: Bool = false
 	
 	public override var text: String? {
 		didSet {
@@ -23,7 +24,15 @@ public class AttributedLabel: UILabel {
 		guard let text = text else { return }
 		
 		let attributedString = NSMutableAttributedString(string: text)
-		attributedString.addAttribute(.kern, value: spacing, range: NSMakeRange(0, text.count))
+		let range = NSMakeRange(0, text.count)
+		
+		if spacing > 0 {
+			attributedString.addAttribute(.kern, value: spacing, range: range)
+		}
+		
+		if underline {
+			attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single, range: range)
+		}
 		
 		attributedText = attributedString
 	}

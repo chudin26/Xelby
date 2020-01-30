@@ -9,12 +9,12 @@
 import UIKit
 
 @IBDesignable
-class CapsuleView: UIView {
+open class CapsuleView: BorderView {
 	
-	override func layoutSubviews() {
+	override open func layoutSubviews() {
 		super.layoutSubviews()
 		
-		layer.cornerRadius = min(bounds.width, bounds.height) / 2
+		borderRadius = min(bounds.width, bounds.height) / 2
 	}
 	
 }

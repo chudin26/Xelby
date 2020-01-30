@@ -28,6 +28,8 @@
 		729BAFBF238E8E6A00F2E424 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBE238E8E6A00F2E424 /* Validator.swift */; };
 		729BAFC2238E9E9300F2E424 /* ValidationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFC1238E9E9300F2E424 /* ValidationTextField.swift */; };
 		729BAFC4238E9EB600F2E424 /* StringValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFC3238E9EB600F2E424 /* StringValidators.swift */; };
+		72ABD60123E342B4009CFC19 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABD60023E342B4009CFC19 /* SelfSizedTableView.swift */; };
+		72ABD60423E3471E009CFC19 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABD60323E3471E009CFC19 /* LabelExtensions.swift */; };
 		72C652882359B8610031B882 /* UIControlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C652872359B8610031B882 /* UIControlHandler.swift */; };
 		72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFCB9323618DBE004BD05D /* RangeExtensions.swift */; };
 		72DFF34C2391786A003BEC7A /* SelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */; };
@@ -86,6 +88,8 @@
 		729BAFBE238E8E6A00F2E424 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		729BAFC1238E9E9300F2E424 /* ValidationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTextField.swift; sourceTree = "<group>"; };
 		729BAFC3238E9EB600F2E424 /* StringValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidators.swift; sourceTree = "<group>"; };
+		72ABD60023E342B4009CFC19 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		72ABD60323E3471E009CFC19 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		72C652872359B8610031B882 /* UIControlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlHandler.swift; sourceTree = "<group>"; };
 		72CFCB9323618DBE004BD05D /* RangeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
 		72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTableViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +169,23 @@
 			path = ValidationTextField;
 			sourceTree = "<group>";
 		};
+		72ABD5FF23E342A5009CFC19 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				72ABD60023E342B4009CFC19 /* SelfSizedTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		72ABD60223E34702009CFC19 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */,
+				72ABD60323E3471E009CFC19 /* LabelExtensions.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
 		72F53AB4233D414500C52753 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +234,8 @@
 		A9A2F7CC20DEFFAF0096103F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				72ABD60223E34702009CFC19 /* Label */,
+				72ABD5FF23E342A5009CFC19 /* TableView */,
 				729BAFC0238E9E7100F2E424 /* ValidationTextField */,
 				723CE54A231FB54C001E088C /* Xib */,
 				A9418A7120F40C9300337C8B /* ImageViews */,
@@ -226,7 +249,6 @@
 				A94DB03D210272DC00D6A99D /* BorderView.swift */,
 				A99281F62106711F00254EC6 /* CropView.swift */,
 				723CE54D231FB594001E088C /* GradientView.swift */,
-				729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */,
 				7280D67E239114E000174692 /* CapsuleView.swift */,
 				72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */,
 				72DFF3562397B625003BEC7A /* SelfRemovableView.swift */,
@@ -425,6 +447,7 @@
 				A9A2F7D520DF08CD0096103F /* DictionaryExtensions.swift in Sources */,
 				A99281F72106711F00254EC6 /* CropView.swift in Sources */,
 				A9D388BC20FA489B0053C943 /* GestureRecognizerClosures.swift in Sources */,
+				72ABD60123E342B4009CFC19 /* SelfSizedTableView.swift in Sources */,
 				72F53AB3233CECC000C52753 /* UIViewFadeAnimations.swift in Sources */,
 				A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */,
 				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
@@ -446,6 +469,7 @@
 				723CE54E231FB594001E088C /* GradientView.swift in Sources */,
 				723CE55C231FBBEA001E088C /* WeakArray.swift in Sources */,
 				A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */,
+				72ABD60423E3471E009CFC19 /* LabelExtensions.swift in Sources */,
 				A9B430F02153D671003A7C78 /* UIBezierPathExtensions.swift in Sources */,
 				729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */,
 				7279966E23D8E4D200FB9779 /* Point.swift in Sources */,
