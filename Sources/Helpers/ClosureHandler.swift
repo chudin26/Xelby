@@ -8,9 +8,6 @@
 
 import UIKit
 
-public typealias VoidFunc = () -> ()
-public typealias Func <T> = (T) -> ()
-
 let closureHandlerSelector = Selector(("handle"))
 
 public class ClosureHandler <T: AnyObject>: NSObject {

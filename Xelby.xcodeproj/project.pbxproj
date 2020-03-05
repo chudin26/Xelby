@@ -23,6 +23,7 @@
 		7279966E23D8E4D200FB9779 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279966D23D8E4D200FB9779 /* Point.swift */; };
 		7279967223D8E90E00FB9779 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279967123D8E90E00FB9779 /* Size.swift */; };
 		7280D67F239114E000174692 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280D67E239114E000174692 /* CapsuleView.swift */; };
+		728D116C2411027B009E874D /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728D116B2411027B009E874D /* Closures.swift */; };
 		729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */; };
 		729BAFBD238D28A700F2E424 /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBC238D28A700F2E424 /* AttributedButton.swift */; };
 		729BAFBF238E8E6A00F2E424 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBE238E8E6A00F2E424 /* Validator.swift */; };
@@ -34,6 +35,8 @@
 		72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFCB9323618DBE004BD05D /* RangeExtensions.swift */; };
 		72DFF34C2391786A003BEC7A /* SelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */; };
 		72DFF3572397B625003BEC7A /* SelfRemovableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFF3562397B625003BEC7A /* SelfRemovableView.swift */; };
+		72E0FEE123FDC63900FFE29A /* CAExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0FEE023FDC63900FFE29A /* CAExtensions.swift */; };
+		72E0FEE323FE9BC400FFE29A /* DrawerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0FEE223FE9BC300FFE29A /* DrawerAnimator.swift */; };
 		72F53AB3233CECC000C52753 /* UIViewFadeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */; };
 		72F53AB6233D416700C52753 /* AnimationCurves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F53AB5233D416700C52753 /* AnimationCurves.swift */; };
 		A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */; };
@@ -83,6 +86,7 @@
 		7279966D23D8E4D200FB9779 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		7279967123D8E90E00FB9779 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		7280D67E239114E000174692 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
+		728D116B2411027B009E874D /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
 		729BAFBC238D28A700F2E424 /* AttributedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
 		729BAFBE238E8E6A00F2E424 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		72CFCB9323618DBE004BD05D /* RangeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
 		72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTableViewCell.swift; sourceTree = "<group>"; };
 		72DFF3562397B625003BEC7A /* SelfRemovableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfRemovableView.swift; sourceTree = "<group>"; };
+		72E0FEE023FDC63900FFE29A /* CAExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAExtensions.swift; sourceTree = "<group>"; };
+		72E0FEE223FE9BC300FFE29A /* DrawerAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerAnimator.swift; sourceTree = "<group>"; };
 		72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFadeAnimations.swift; sourceTree = "<group>"; };
 		72F53AB5233D416700C52753 /* AnimationCurves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurves.swift; sourceTree = "<group>"; };
 		A908F7D020F0F54C00697A07 /* AnimatableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +224,7 @@
 				A9A2F7E520DF4CE10096103F /* InstantiateExtensions.swift */,
 				723CE55B231FBBEA001E088C /* WeakArray.swift */,
 				723CE55D231FBC13001E088C /* WeakRef.swift */,
+				728D116B2411027B009E874D /* Closures.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -333,6 +340,7 @@
 			children = (
 				72F53AB4233D414500C52753 /* Animations */,
 				A9A2F7C820DEFE540096103F /* PathMaker.swift */,
+				72E0FEE023FDC63900FFE29A /* CAExtensions.swift */,
 				A9B281C920DEEEF600C3B9CD /* CGExtensions.swift */,
 				A9B281CE20DEF2C600C3B9CD /* UIColorExtensions.swift */,
 				A9A2F7D020DF02490096103F /* UIImageExtensions.swift */,
@@ -344,6 +352,7 @@
 		A9D388B820FA34E30053C943 /* Animators */ = {
 			isa = PBXGroup;
 			children = (
+				72E0FEE223FE9BC300FFE29A /* DrawerAnimator.swift */,
 				A9D388B920FA34F50053C943 /* PanAnimator.swift */,
 			);
 			path = Animators;
@@ -453,6 +462,7 @@
 				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
 				A9A2F7E620DF4CE10096103F /* InstantiateExtensions.swift in Sources */,
 				72C652882359B8610031B882 /* UIControlHandler.swift in Sources */,
+				72E0FEE123FDC63900FFE29A /* CAExtensions.swift in Sources */,
 				A9B430FA21540F79003A7C78 /* UIImageViewExtensions.swift in Sources */,
 				A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */,
 				729BAFBF238E8E6A00F2E424 /* Validator.swift in Sources */,
@@ -460,6 +470,7 @@
 				729BAFBD238D28A700F2E424 /* AttributedButton.swift in Sources */,
 				A99491ED20FD73BE00F2FDCC /* EllipseView.swift in Sources */,
 				A99491E620FD56B100F2FDCC /* StringExtensions.swift in Sources */,
+				72E0FEE323FE9BC400FFE29A /* DrawerAnimator.swift in Sources */,
 				A9A2F7D120DF02490096103F /* UIImageExtensions.swift in Sources */,
 				7279965C23D780C500FB9779 /* Line.swift in Sources */,
 				A9418A7020F40C8700337C8B /* AnyAspectImageView.swift in Sources */,
@@ -476,6 +487,7 @@
 				723CE541231FB224001E088C /* UIViewExtensions.swift in Sources */,
 				7279965F23D7867E00FB9779 /* Vector.swift in Sources */,
 				A99281F921067A8600254EC6 /* UIViewLayout.swift in Sources */,
+				728D116C2411027B009E874D /* Closures.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */,
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,
