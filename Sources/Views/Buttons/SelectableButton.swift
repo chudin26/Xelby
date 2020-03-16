@@ -44,12 +44,12 @@ open class SelectableButton: UIButton {
 		return l
 	}()
 	
-	override public var isHighlighted: Bool {
+	override open var isHighlighted: Bool {
 		get { return super.isHighlighted }
 		set { setPressState(state: newValue) }
 	}
 	
-	override public var isSelected: Bool {
+	override open var isSelected: Bool {
 		get { return super.isSelected }
 		set {
 			super.isSelected = newValue

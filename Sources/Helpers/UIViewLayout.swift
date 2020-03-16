@@ -39,7 +39,15 @@ public extension UIView {
 		
 		return constraint
 	}
-	
+
+	@discardableResult
+	func addConstraint(attribute: NSLayoutConstraint.Attribute, view1: UIView, view2: UIView, constant: CGFloat, multiplier: CGFloat = 1) -> NSLayoutConstraint {
+		let constraint = NSLayoutConstraint(item: view1, attribute: attribute, relatedBy: .equal, toItem: view2, attribute: attribute, multiplier: multiplier, constant: constant)
+		addConstraint(constraint)
+		
+		return constraint
+	}
+
 	func addConstraints(toView view: UIView, attributes: [NSLayoutConstraint.Attribute: CGFloat]) {
 		for attr in attributes {
 			if attr.key == .width || attr.key == .height {
