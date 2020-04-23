@@ -38,6 +38,14 @@ public extension CGRect {
 	
 }
 
+public extension CGSize {
+	
+	static func max(_ size1: CGSize, _ size2: CGSize) -> CGSize {
+		return .init(width: Swift.max(size1.width, size2.width), height: Swift.max(size1.height, size2.height))
+	}
+	
+}
+
 public extension CGAffineTransform {
 	
 	init(scale: CGFloat) {

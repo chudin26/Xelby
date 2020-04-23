@@ -48,6 +48,18 @@ public extension UIView {
 		return constraint
 	}
 
+	func addConstraints(attributes: [NSLayoutConstraint.Attribute], betweenView view1: UIView, andView view2: UIView, constant: CGFloat, multiplier: CGFloat = 1) {
+		for attr in attributes {
+			addConstraint(NSLayoutConstraint(item: view1, attribute: attr, relatedBy: .equal, toItem: view2, attribute: attr, multiplier: multiplier, constant: constant))
+		}
+	}
+
+	func addConstraints(attributes: [NSLayoutConstraint.Attribute: CGFloat], betweenView view1: UIView, andView view2: UIView) {
+		for attr in attributes {
+			addConstraint(NSLayoutConstraint(item: view1, attribute: attr.key, relatedBy: .equal, toItem: view2, attribute: attr.key, multiplier: 1, constant: attr.value))
+		}
+	}
+
 	func addConstraints(toView view: UIView, attributes: [NSLayoutConstraint.Attribute: CGFloat]) {
 		for attr in attributes {
 			if attr.key == .width || attr.key == .height {
@@ -88,9 +100,7 @@ public extension UIView {
 		view.translatesAutoresizingMaskIntoConstraints = false
 		
 		addSubview(view)
-		for attr in attributes {
-			addConstraint(toView: view, attribute: attr, constant: 0)
-		}
+		attributes.forEach { addConstraint(toView: view, attribute: $0, constant: 0) }
 	}
 
 	func addSubview(_ view: UIView, attributes: [NSLayoutConstraint.Attribute: CGFloat]) {

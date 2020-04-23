@@ -18,3 +18,19 @@ public extension CAShapeLayer {
 	}
 
 }
+
+public extension CAGradientLayer {
+	
+	convenience init(startPoint: CGPoint, endPoint: CGPoint, colors: [UIColor], locations: [Float]? = nil) {
+		self.init()
+		
+		self.startPoint = startPoint
+		self.endPoint = endPoint
+		self.colors = colors.map { $0.cgColor }
+		
+		if let locations = locations {
+			self.locations = locations.map { NSNumber(value: $0) }
+		}
+	}
+	
+}
