@@ -37,21 +37,35 @@ extension Animator.AnimationType {
 			}
 			
 			view.transform = startTransform
+
+		case .slide(let direction):
+			let parentFrame = containerView.bounds
+			let originalFrame: CGRect = view.frame
 			
-		case .scaleUp:
+			let startTransform: CGAffineTransform
+			switch direction {
+			case .fromTop: 		startTransform = CGAffineTransform(translationX: 0, y: parentFrame.minY - originalFrame.maxY)
+			case .fromBottom: 	startTransform = CGAffineTransform(translationX: 0, y: parentFrame.maxY - originalFrame.minY)
+			case .fromLeft: 	startTransform = CGAffineTransform(translationX: parentFrame.minX - originalFrame.maxX, y: 0)
+			case .fromRight: 	startTransform = CGAffineTransform(translationX: parentFrame.maxX - originalFrame.minX, y: 0)
+			}
+			
+			view.transform = startTransform
+
+		case .scaleUp, .scale:
 			view.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
 			
-		case .fadeIn:
+		case .fadeIn, .fade:
 			view.alpha = 0
 		}
 	}
 	
 	func setToOriginalState(view: UIView, containerView: UIView) {
 		switch self {
-		case .slideIn(_), .scaleUp:
+		case .slideIn(_), .scaleUp, .slide, .scale:
 			view.transform = .identity
 			
-		case .fadeIn:
+		case .fadeIn, .fade:
 			view.alpha = 1
 		}
 	}

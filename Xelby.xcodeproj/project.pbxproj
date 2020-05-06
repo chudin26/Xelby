@@ -24,6 +24,7 @@
 		7279966E23D8E4D200FB9779 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279966D23D8E4D200FB9779 /* Point.swift */; };
 		7279967223D8E90E00FB9779 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279967123D8E90E00FB9779 /* Size.swift */; };
 		727F2F6C2423731A00342F77 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727F2F6B2423731A00342F77 /* LoadingView.swift */; };
+		728012EC2462C30400CC9960 /* ViewSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728012EB2462C30400CC9960 /* ViewSwitch.swift */; };
 		7280D67F239114E000174692 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280D67E239114E000174692 /* CapsuleView.swift */; };
 		728D116C2411027B009E874D /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728D116B2411027B009E874D /* Closures.swift */; };
 		729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */; };
@@ -89,6 +90,7 @@
 		7279966D23D8E4D200FB9779 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		7279967123D8E90E00FB9779 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		727F2F6B2423731A00342F77 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		728012EB2462C30400CC9960 /* ViewSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSwitch.swift; sourceTree = "<group>"; };
 		7280D67E239114E000174692 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		728D116B2411027B009E874D /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		729BAFBA238D26CC00F2E424 /* AttributedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */,
 				72DFF3562397B625003BEC7A /* SelfRemovableView.swift */,
 				727F2F6B2423731A00342F77 /* LoadingView.swift */,
+				728012EB2462C30400CC9960 /* ViewSwitch.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				7241246F245197D800F3538B /* GradientViewFader.swift in Sources */,
 				A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */,
 				72ABD60423E3471E009CFC19 /* LabelExtensions.swift in Sources */,
+				728012EC2462C30400CC9960 /* ViewSwitch.swift in Sources */,
 				A9B430F02153D671003A7C78 /* UIBezierPathExtensions.swift in Sources */,
 				729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */,
 				7279966E23D8E4D200FB9779 /* Point.swift in Sources */,
