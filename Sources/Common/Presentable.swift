@@ -36,7 +36,7 @@ extension UIViewController: Presenting {
 	public func dismiss(presentStyle: PresentStyle, animated: Bool) {
 		switch presentStyle {
 		case .present:
-			dismiss(animated: animated, completion: nil)
+			presentingViewController?.dismiss(animated: animated, completion: nil)
 			
 		case .push:
 			self.navigationController?.popViewController(animated: animated)
