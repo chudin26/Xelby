@@ -10,26 +10,6 @@ import Foundation
 
 public typealias Point = (CGFloat, CGFloat)
 
-public extension CGVector {
-	
-	init(_ dx: CGFloat, _ dy: CGFloat) {
-		self.init(dx: dx, dy: dy)
-	}
-	
-	init(angle: CGFloat, length: CGFloat = 1) {
-		self.init(dx: cos(angle) * length, dy: sin(angle) * length)
-	}
-	
-	init(point: CGPoint) {
-		self.init(dx: point.x, dy: point.y)
-	}
-	
-	init(size: CGSize) {
-		self.init(dx: size.width, dy: size.height)
-	}
-		
-}
-
 public extension CGRect {
 	
 	init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) {

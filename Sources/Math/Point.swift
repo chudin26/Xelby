@@ -22,6 +22,10 @@ public extension CGPoint {
 		self.init(x: x, y: y)
 	}
 	
+	init(vector: CGVector) {
+		self.init(x: vector.dx, y: vector.dy)
+	}
+	
 	static func + (point: CGPoint, vector: CGVector) -> CGPoint {
 		return CGPoint(x: point.x + vector.dx, y: point.y + vector.dy)
 	}

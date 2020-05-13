@@ -14,6 +14,21 @@ public extension CGVector {
 		self.init(dx: line.b.x - line.a.x, dy: line.b.y - line.a.y)
 	}
 
+	init(_ dx: CGFloat, _ dy: CGFloat) {
+		self.init(dx: dx, dy: dy)
+	}
+	
+	init(angle: CGFloat, length: CGFloat = 1) {
+		self.init(dx: cos(angle) * length, dy: sin(angle) * length)
+	}
+	
+	init(point: CGPoint) {
+		self.init(dx: point.x, dy: point.y)
+	}
+	
+	init(size: CGSize) {
+		self.init(dx: size.width, dy: size.height)
+	}
 
 	var length: CGFloat {
 		return sqrt(dx * dx + dy * dy)
