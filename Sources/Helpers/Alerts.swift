@@ -19,4 +19,12 @@ public class Alerts {
 		rootVC?.present(alert, animated: true, completion: nil)
 	}
 
+	static public func showMessage(_ message: String, title: String, onVC vc: UIViewController, commitString: String = "OK", handler: ((UIAlertAction) -> Void)? = nil) {
+		let alert = UIAlertController(title: title.localized, message: message, preferredStyle: .alert)
+		let cancel = UIAlertAction(title: commitString.localized, style: .cancel, handler: handler)
+		alert.addAction(cancel)
+		
+		vc.present(alert, animated: true, completion: nil)
+	}
+
 }
