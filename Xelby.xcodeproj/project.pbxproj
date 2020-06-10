@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72287AAE233B8D7700137402 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72287AAD233B8D7700137402 /* DIContainer.swift */; };
+		7231EB6224917E6900F9A891 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7231EB6124917E6900F9A891 /* DateConverter.swift */; };
 		723CE541231FB224001E088C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE540231FB224001E088C /* UIViewExtensions.swift */; };
 		723CE54C231FB558001E088C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE54B231FB558001E088C /* XibView.swift */; };
 		723CE54E231FB594001E088C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE54D231FB594001E088C /* GradientView.swift */; };
@@ -74,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		72287AAD233B8D7700137402 /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		7231EB6124917E6900F9A891 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		723CE540231FB224001E088C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		723CE54B231FB558001E088C /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		723CE54D231FB594001E088C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				723CE55B231FBBEA001E088C /* WeakArray.swift */,
 				723CE55D231FBC13001E088C /* WeakRef.swift */,
 				728D116B2411027B009E874D /* Closures.swift */,
+				7231EB6124917E6900F9A891 /* DateConverter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */,
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,
 				727F2F6C2423731A00342F77 /* LoadingView.swift in Sources */,
+				7231EB6224917E6900F9A891 /* DateConverter.swift in Sources */,
 				A91F2A4B20F7DEF000CA7B8E /* ArrowView.swift in Sources */,
 				723CE54C231FB558001E088C /* XibView.swift in Sources */,
 				729BAFC4238E9EB600F2E424 /* StringValidators.swift in Sources */,
