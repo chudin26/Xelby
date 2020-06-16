@@ -43,5 +43,10 @@ public class ViewSwitch: UIView {
 		
 		currentIndex = index
 	}
+	
+	public func reset() {
+		currentIndex = -1
+		views.forEach { $0.isHidden = true }
+	}
 
 }
