@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		720F568624E9CA940094FA46 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720F568524E9CA940094FA46 /* Logger.swift */; };
+		720F568A24E9D7EA0094FA46 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720F568924E9D7EA0094FA46 /* DeviceInfo.swift */; };
+		720F568C24E9DA4B0094FA46 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720F568B24E9DA4B0094FA46 /* AppInfo.swift */; };
 		72287AAE233B8D7700137402 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72287AAD233B8D7700137402 /* DIContainer.swift */; };
 		7231EB6224917E6900F9A891 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7231EB6124917E6900F9A891 /* DateConverter.swift */; };
 		723CE541231FB224001E088C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE540231FB224001E088C /* UIViewExtensions.swift */; };
@@ -76,6 +78,8 @@
 
 /* Begin PBXFileReference section */
 		720F568524E9CA940094FA46 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		720F568924E9D7EA0094FA46 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		720F568B24E9DA4B0094FA46 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		72287AAD233B8D7700137402 /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		7231EB6124917E6900F9A891 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		723CE540231FB224001E088C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 				723CE55D231FBC13001E088C /* WeakRef.swift */,
 				728D116B2411027B009E874D /* Closures.swift */,
 				7231EB6124917E6900F9A891 /* DateConverter.swift */,
+				720F568924E9D7EA0094FA46 /* DeviceInfo.swift */,
+				720F568B24E9DA4B0094FA46 /* AppInfo.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 				72ABD60423E3471E009CFC19 /* LabelExtensions.swift in Sources */,
 				728012EC2462C30400CC9960 /* ViewSwitch.swift in Sources */,
 				A9B430F02153D671003A7C78 /* UIBezierPathExtensions.swift in Sources */,
+				720F568C24E9DA4B0094FA46 /* AppInfo.swift in Sources */,
 				729BAFBB238D26CC00F2E424 /* AttributedLabel.swift in Sources */,
 				7279966E23D8E4D200FB9779 /* Point.swift in Sources */,
 				723CE541231FB224001E088C /* UIViewExtensions.swift in Sources */,
@@ -507,6 +514,7 @@
 				A99281F921067A8600254EC6 /* UIViewLayout.swift in Sources */,
 				728D116C2411027B009E874D /* Closures.swift in Sources */,
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
+				720F568A24E9D7EA0094FA46 /* DeviceInfo.swift in Sources */,
 				72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */,
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,
 				727F2F6C2423731A00342F77 /* LoadingView.swift in Sources */,
