@@ -13,7 +13,7 @@ public final class TimeMeasurement {
 		let startDate = Date()
 		block()
 		let interval = Date().timeIntervalSince(startDate)
-		print("TimeMeasurement: \(entityName) operation takes \(interval) time")
+		Logger.debug("TimeMeasurement: \(entityName) operation takes \(interval) time")
 		
 		return interval
 	}

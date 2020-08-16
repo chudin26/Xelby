@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720F568624E9CA940094FA46 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720F568524E9CA940094FA46 /* Logger.swift */; };
 		72287AAE233B8D7700137402 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72287AAD233B8D7700137402 /* DIContainer.swift */; };
 		7231EB6224917E6900F9A891 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7231EB6124917E6900F9A891 /* DateConverter.swift */; };
 		723CE541231FB224001E088C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE540231FB224001E088C /* UIViewExtensions.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		720F568524E9CA940094FA46 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		72287AAD233B8D7700137402 /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		7231EB6124917E6900F9A891 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		723CE540231FB224001E088C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				723CE54F231FB623001E088C /* Presentable.swift */,
 				723CE551231FBA1C001E088C /* Coordinator.swift */,
 				729BAFBE238E8E6A00F2E424 /* Validator.swift */,
+				720F568524E9CA940094FA46 /* Logger.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				7279967223D8E90E00FB9779 /* Size.swift in Sources */,
 				A908F7D320F0F56300697A07 /* Animator.swift in Sources */,
 				723CE554231FBA60001E088C /* UIViewInstantiate.swift in Sources */,
+				720F568624E9CA940094FA46 /* Logger.swift in Sources */,
 				A94DB03E210272DD00D6A99D /* BorderView.swift in Sources */,
 				A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */,
 				A978BC9B20F83EF30011BF84 /* Alerts.swift in Sources */,
