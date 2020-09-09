@@ -9,5 +9,6 @@
 import Foundation
 
 public protocol Coordinator {
-	func start()
+	associatedtype Presenting
+	func start(in presenting: Presenting)
 }

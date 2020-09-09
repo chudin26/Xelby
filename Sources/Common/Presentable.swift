@@ -44,3 +44,20 @@ extension UIViewController: Presenting {
 	}
 	
 }
+
+extension UIWindow: Presenting {
+	
+	// ATTENTION: this function always set window.rootViewController, no matter what presentStyle is
+	public func present(_ presentable: UIViewController, presentStyle: PresentStyle, animated: Bool) {
+		rootViewController = presentable
+
+		if animated {
+			UIView.transition(with: self, duration: 0.5, options: [.transitionFlipFromLeft, .curveEaseInOut], animations: {})
+		}
+	}
+	
+	public func dismiss(presentStyle: PresentStyle, animated: Bool) {
+		fatalError("Cannot dismiss rootViewController of UIWindow")
+	}
+
+}
