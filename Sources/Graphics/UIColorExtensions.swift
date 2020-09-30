@@ -50,6 +50,26 @@ public extension UIColor {
 		return UIColor(red: components[0], green: components[1], blue: components[2], alpha: components[3])
 	}
 	
+	// Works like gradientLayer where result is a color on gradient at 'position'
+	// Position and locations in range 0...1
+	static func interpolate(colors: [UIColor], locations: [Float]? = nil, at position: Float) -> UIColor {
+		let locs = locations ?? (0 ..< colors.count).indices.map { Float($0) / Float(colors.count - 1) }
+
+		if position < locs.first! {
+			return colors.first!
+		} else if position > locs.last! {
+			return colors.last!
+		}
+		
+		var index = 1
+		while index < colors.count - 1 && locs[index] < position {
+			index += 1
+		}
+		
+		let coef = (position - locs[index - 1]) / (locs[index] - locs[index - 1])
+		return colors[index - 1].blend(with: colors[index], coefficient: CGFloat(coef))
+	}
+	
 	func components() -> (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
 		var red: CGFloat = 0
 		var green: CGFloat = 0
