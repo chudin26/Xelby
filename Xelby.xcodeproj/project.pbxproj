@@ -40,6 +40,8 @@
 		72ABD60123E342B4009CFC19 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABD60023E342B4009CFC19 /* SelfSizedTableView.swift */; };
 		72ABD60423E3471E009CFC19 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ABD60323E3471E009CFC19 /* LabelExtensions.swift */; };
 		72C652882359B8610031B882 /* UIControlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C652872359B8610031B882 /* UIControlHandler.swift */; };
+		72C86F1F2523D4AC00CA6ACC /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C86F1E2523D4AC00CA6ACC /* ColorParser.swift */; };
+		72C86F272523D9E500CA6ACC /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C86F262523D9E500CA6ACC /* NumberParser.swift */; };
 		72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CFCB9323618DBE004BD05D /* RangeExtensions.swift */; };
 		72DFF34C2391786A003BEC7A /* SelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */; };
 		72DFF3572397B625003BEC7A /* SelfRemovableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DFF3562397B625003BEC7A /* SelfRemovableView.swift */; };
@@ -111,6 +113,8 @@
 		72ABD60023E342B4009CFC19 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
 		72ABD60323E3471E009CFC19 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		72C652872359B8610031B882 /* UIControlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlHandler.swift; sourceTree = "<group>"; };
+		72C86F1E2523D4AC00CA6ACC /* ColorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
+		72C86F262523D9E500CA6ACC /* NumberParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberParser.swift; sourceTree = "<group>"; };
 		72CFCB9323618DBE004BD05D /* RangeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeExtensions.swift; sourceTree = "<group>"; };
 		72DFF34B2391786A003BEC7A /* SelectableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTableViewCell.swift; sourceTree = "<group>"; };
 		72DFF3562397B625003BEC7A /* SelfRemovableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfRemovableView.swift; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 				72ABD60323E3471E009CFC19 /* LabelExtensions.swift */,
 			);
 			path = Label;
+			sourceTree = "<group>";
+		};
+		72C86F1D2523D49A00CA6ACC /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				72C86F262523D9E500CA6ACC /* NumberParser.swift */,
+				72C86F1E2523D4AC00CA6ACC /* ColorParser.swift */,
+			);
+			path = Parsers;
 			sourceTree = "<group>";
 		};
 		72F53AB4233D414500C52753 /* Animations */ = {
@@ -348,6 +361,7 @@
 		A9B281C720DEEE2C00C3B9CD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				72C86F1D2523D49A00CA6ACC /* Parsers */,
 				7279965D23D7818900FB9779 /* Math */,
 				A9A2F7E420DF4CD80096103F /* Common */,
 				A91F2A5820F8135000CA7B8E /* Helpers */,
@@ -483,6 +497,7 @@
 				A99281F72106711F00254EC6 /* CropView.swift in Sources */,
 				A9D388BC20FA489B0053C943 /* GestureRecognizerClosures.swift in Sources */,
 				72ABD60123E342B4009CFC19 /* SelfSizedTableView.swift in Sources */,
+				72C86F272523D9E500CA6ACC /* NumberParser.swift in Sources */,
 				72F53AB3233CECC000C52753 /* UIViewFadeAnimations.swift in Sources */,
 				A908F7D120F0F54C00697A07 /* AnimatableViewController.swift in Sources */,
 				A9A2F7CB20DEFF040096103F /* AnimationExtensions.swift in Sources */,
@@ -520,6 +535,7 @@
 				A9A2F7CF20DEFFC10096103F /* SelectableButton.swift in Sources */,
 				720F568A24E9D7EA0094FA46 /* DeviceInfo.swift in Sources */,
 				72CFCB9423618DBE004BD05D /* RangeExtensions.swift in Sources */,
+				72C86F1F2523D4AC00CA6ACC /* ColorParser.swift in Sources */,
 				A9A0E77920F69D3F00533BB9 /* ImagePreviewViewController.swift in Sources */,
 				727F2F6C2423731A00342F77 /* LoadingView.swift in Sources */,
 				7231EB6224917E6900F9A891 /* DateConverter.swift in Sources */,

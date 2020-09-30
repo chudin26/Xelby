@@ -27,14 +27,14 @@ open class EllipseView: UIView {
 		
 		path.lineWidth = lineWidth
 		
-		if let strokeColor = strokeColor {
-			strokeColor.setStroke()
-			path.stroke()
-		}
-		
 		if let fillColor = fillColor {
 			fillColor.setFill()
 			path.fill()
+		}
+
+		if let strokeColor = strokeColor {
+			strokeColor.setStroke()
+			path.stroke()
 		}
 	}
 	

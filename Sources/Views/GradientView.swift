@@ -11,12 +11,21 @@ import UIKit
 @IBDesignable
 open class GradientView: UIView {
 	
-	@IBInspectable public var startColor: UIColor! = UIColor(white: 0.0, alpha: 1.0) { didSet { setup() }}
-	@IBInspectable public var endColor: UIColor! = UIColor(white: 1.0, alpha: 1.0) { didSet { setup() }}
-	
+	@IBInspectable public var startColor: UIColor? { didSet { setup() }}
+	@IBInspectable public var endColor: UIColor? { didSet { setup() }}
+		
 	@IBInspectable public var startPoint: CGPoint = CGPoint(x: 0, y: 0) { didSet { setup() }}
 	@IBInspectable public var endPoint: CGPoint = CGPoint(x: 1, y: 1) { didSet { setup() }}
 	
+	// Colors property is same as gradientLayer.colors
+	// Example of using: "45B37A, 98AC43, 28AF4F"
+	@IBInspectable public var colors: String? { didSet { setup() }}
+	
+	// Locations property is same as gradientLayer.locations
+	// Example of using: "0.2, 0.34, 0.9"
+	@IBInspectable public var locations: String? { didSet { setup() }}
+	
+
 	override public class var layerClass: AnyClass {
 		return CAGradientLayer.self
 	}
@@ -49,7 +58,13 @@ open class GradientView: UIView {
 	private func setup() {
 		gradientLayer.startPoint = startPoint
 		gradientLayer.endPoint = endPoint
-		gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
+		
+		if let colorsString = colors, let locationsString = locations {
+			gradientLayer.colors = try? ColorParser().parse(from: colorsString).map { $0.cgColor }
+			gradientLayer.locations = try? NumberParser().parse(from: locationsString).map { NSNumber(value: $0) }
+		} else if let startColor = startColor, let endColor = endColor {
+			gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
+		}
 	}
 	
 }
