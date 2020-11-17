@@ -14,6 +14,17 @@ public class ViewSwitch: UIView {
 
 	public private (set) var currentIndex: Int = -1
 	
+	public func place(views: [UIView], asSubviews: Bool) {
+		self.views = views
+		
+		if asSubviews {
+			for view in views {
+				addSubview(view, autoLayoutMargin: 0)
+				view.isHidden = true
+			}
+		}
+	}
+	
 	public func switchTo(index: Int, with animationType: Animator.AnimationType? = nil, duration: TimeInterval? = nil, curve: CAMediaTimingFunction? = nil) {
 		if index == currentIndex {
 			return
