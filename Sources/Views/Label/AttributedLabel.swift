@@ -12,6 +12,7 @@ import UIKit
 public class AttributedLabel: UILabel {
 	
 	@IBInspectable public var spacing: CGFloat = 0
+	@IBInspectable public var lineHeight: CGFloat = 0
 	@IBInspectable public var underline: Bool = false
 	
 	public override var text: String? {
@@ -32,6 +33,13 @@ public class AttributedLabel: UILabel {
 		
 		if underline {
 			attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single, range: range)
+		}
+		
+		if lineHeight > 0 {
+			let paragraph = NSMutableParagraphStyle()
+			paragraph.lineSpacing = lineHeight
+			
+			attributedString.addAttribute(.paragraphStyle, value: paragraph, range: range)
 		}
 		
 		attributedText = attributedString
