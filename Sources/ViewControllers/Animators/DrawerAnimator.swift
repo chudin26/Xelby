@@ -10,14 +10,23 @@ import UIKit
 
 public class DrawerAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 	
+	public enum Direction {
+		case fromLeft
+		case fromRight
+	}
+	
 	static let fadeViewTag = 123
 	
 	public var containerView: UIView!
 	
 	private var dismissing: Bool
+	private var direction: Direction
+	private var fadeBackgroundColor: UIColor
 	
-	public init(dismissing: Bool = false) {
+	public init(dismissing: Bool = false, direction: Direction = .fromLeft, fadeBackgroundColor: UIColor = .init(white: 0, alpha: 0.6)) {
 		self.dismissing = dismissing
+		self.direction = direction
+		self.fadeBackgroundColor = fadeBackgroundColor
 	}
 	
 	@objc private func onPan(recognizer: UIPanGestureRecognizer) {
@@ -65,7 +74,7 @@ public class DrawerAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 		if !dismissing {
 			let fadeView = UIView(frame: containerView.bounds)
 			fadeView.tag = DrawerAnimator.fadeViewTag
-			fadeView.backgroundColor = .init(white: 0, alpha: 0.6)
+			fadeView.backgroundColor = fadeBackgroundColor
 			fadeView.fadeIn(duration: duration / 2)
 			
 			containerView.addSubview(fadeView)
@@ -77,7 +86,7 @@ public class DrawerAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 		}
 		
 		let drawerView = dismissing ? fromView : toView
-		let fromTransform = CGAffineTransform(translationX: -drawerView.bounds.width / 2, y: 0)
+		let fromTransform = CGAffineTransform(translationX: (direction == .fromLeft ? -1 : 1) * drawerView.bounds.width / 2, y: 0)
 		let toTransform = CGAffineTransform.identity
 		let curve = AnimationCurves.superEaseOut
 
