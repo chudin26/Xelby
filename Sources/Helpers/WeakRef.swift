@@ -10,9 +10,17 @@ import Foundation
 
 public class WeakRef <T> where T: AnyObject {
 
+	private var onDispose: (() -> ())? = nil
 	public private(set) weak var value: T?
 
-	public init(_ value: T?) {
+	public init(_ value: T?, onDispose: (() -> ())? = nil) {
 		self.value = value
+		self.onDispose = onDispose
+		setupWatcher()
+	}
+
+	private func setupWatcher() {
+		guard let value = value, let onDispose = onDispose else { return }
+		WeakWatcher.watch(value, onDeinit: onDispose)
 	}
 }

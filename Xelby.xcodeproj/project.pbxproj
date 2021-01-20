@@ -78,6 +78,7 @@
 		A9D388BA20FA34F50053C943 /* PanAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388B920FA34F50053C943 /* PanAnimator.swift */; };
 		A9D388BC20FA489B0053C943 /* GestureRecognizerClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388BB20FA489B0053C943 /* GestureRecognizerClosures.swift */; };
 		A9D388BE20FA492B0053C943 /* ClosureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D388BD20FA492B0053C943 /* ClosureHandler.swift */; };
+		F9020E3625B840010031ADDB /* WeakWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9020E3525B840010031ADDB /* WeakWatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,7 @@
 		A9D388B920FA34F50053C943 /* PanAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PanAnimator.swift; path = ../../../../Xelby/Sources/ViewControllers/Animators/PanAnimator.swift; sourceTree = "<group>"; };
 		A9D388BB20FA489B0053C943 /* GestureRecognizerClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GestureRecognizerClosures.swift; path = ../../../Xelby/Sources/Helpers/GestureRecognizerClosures.swift; sourceTree = "<group>"; };
 		A9D388BD20FA492B0053C943 /* ClosureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureHandler.swift; sourceTree = "<group>"; };
+		F9020E3525B840010031ADDB /* WeakWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakWatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 				7231EB6124917E6900F9A891 /* DateConverter.swift */,
 				720F568924E9D7EA0094FA46 /* DeviceInfo.swift */,
 				720F568B24E9DA4B0094FA46 /* AppInfo.swift */,
+				F9020E3525B840010031ADDB /* WeakWatcher.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				72C652882359B8610031B882 /* UIControlHandler.swift in Sources */,
 				72E0FEE123FDC63900FFE29A /* CAExtensions.swift in Sources */,
 				A9B430FA21540F79003A7C78 /* UIImageViewExtensions.swift in Sources */,
+				F9020E3625B840010031ADDB /* WeakWatcher.swift in Sources */,
 				A91F2A5A20F8136B00CA7B8E /* TimeMeasurement.swift in Sources */,
 				729BAFBF238E8E6A00F2E424 /* Validator.swift in Sources */,
 				723CE552231FBA1C001E088C /* Coordinator.swift in Sources */,
