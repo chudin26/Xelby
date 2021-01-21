@@ -14,6 +14,10 @@ public struct WeakArray<Element> where Element: AnyObject {
 
 	public init() {}
 
+	public init(wrappedValue: [Element]) {
+		self.wrappedValue = wrappedValue
+	}
+
 	public var wrappedValue: [Element] {
 		mutating get {
 			refreshStorage()

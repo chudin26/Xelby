@@ -14,6 +14,10 @@ public struct WeakDictionary<T: Hashable, Element: AnyObject> {
 
 	public init() {}
 
+	public init(wrappedValue: [T:Element]) {
+		self.wrappedValue = wrappedValue
+	}
+
 	public var wrappedValue: [T:Element] {
 		mutating get {
 			refreshStorage()
