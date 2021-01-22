@@ -9,21 +9,26 @@
 import Foundation
 
 @propertyWrapper
-public class WeakArray<Element> where Element: AnyObject {
+public struct WeakArray<Element> where Element: AnyObject {
 	private var storage = [WeakRef<Element>]()
 
 	public init() {}
 
+	public init(wrappedValue: [Element]) {
+		self.wrappedValue = wrappedValue
+	}
+
 	public var wrappedValue: [Element] {
-		get {
+		mutating get {
+			refreshStorage()
 			return storage.compactMap { $0.value }
 		}
 		set {
-			storage = newValue.map { WeakRef($0) { [weak self] in self?.refreshStorage() } }
+			storage = newValue.map { WeakRef($0) }
 		}
 	}
 
-	private func refreshStorage() {
+	private mutating func refreshStorage() {
 		storage.removeAll { $0.value == nil }
 	}
 }
