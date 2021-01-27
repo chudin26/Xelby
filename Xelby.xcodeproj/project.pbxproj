@@ -18,7 +18,6 @@
 		723CE54E231FB594001E088C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE54D231FB594001E088C /* GradientView.swift */; };
 		723CE550231FB623001E088C /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE54F231FB623001E088C /* Presentable.swift */; };
 		723CE552231FBA1C001E088C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE551231FBA1C001E088C /* Coordinator.swift */; };
-		723CE554231FBA60001E088C /* UIViewInstantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE553231FBA60001E088C /* UIViewInstantiate.swift */; };
 		723CE556231FBA96001E088C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE555231FBA96001E088C /* NibLoadable.swift */; };
 		723CE55C231FBBEA001E088C /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE55B231FBBEA001E088C /* WeakArray.swift */; };
 		723CE55E231FBC13001E088C /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723CE55D231FBC13001E088C /* WeakRef.swift */; };
@@ -92,7 +91,6 @@
 		723CE54D231FB594001E088C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		723CE54F231FB623001E088C /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		723CE551231FBA1C001E088C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		723CE553231FBA60001E088C /* UIViewInstantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewInstantiate.swift; sourceTree = "<group>"; };
 		723CE555231FBA96001E088C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		723CE55B231FBBEA001E088C /* WeakArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
 		723CE55D231FBC13001E088C /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 				723CE54A231FB54C001E088C /* Xib */,
 				A9418A7120F40C9300337C8B /* ImageViews */,
 				A9A2F7CD20DEFFB40096103F /* Buttons */,
-				723CE553231FBA60001E088C /* UIViewInstantiate.swift */,
 				723CE540231FB224001E088C /* UIViewExtensions.swift */,
 				72F53AB2233CECC000C52753 /* UIViewFadeAnimations.swift */,
 				72C652872359B8610031B882 /* UIControlHandler.swift */,
@@ -485,7 +482,6 @@
 				7279966123D7890B00FB9779 /* Rectangle.swift in Sources */,
 				7279967223D8E90E00FB9779 /* Size.swift in Sources */,
 				A908F7D320F0F56300697A07 /* Animator.swift in Sources */,
-				723CE554231FBA60001E088C /* UIViewInstantiate.swift in Sources */,
 				720F568624E9CA940094FA46 /* Logger.swift in Sources */,
 				A94DB03E210272DD00D6A99D /* BorderView.swift in Sources */,
 				A9B281CA20DEEEF600C3B9CD /* CGExtensions.swift in Sources */,
