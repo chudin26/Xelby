@@ -249,6 +249,7 @@
 		A91F2A5820F8135000CA7B8E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				720F568524E9CA940094FA46 /* Logger.swift */,
 				A99281F821067A8600254EC6 /* UIViewLayout.swift */,
 				A978BC9A20F83EF20011BF84 /* Alerts.swift */,
 				A91F2A5920F8136B00CA7B8E /* TimeMeasurement.swift */,
@@ -332,7 +333,6 @@
 				723CE54F231FB623001E088C /* Presentable.swift */,
 				723CE551231FBA1C001E088C /* Coordinator.swift */,
 				729BAFBE238E8E6A00F2E424 /* Validator.swift */,
-				720F568524E9CA940094FA46 /* Logger.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";

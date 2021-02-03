@@ -20,34 +20,34 @@ public class Logger {
 
 	public static let shared = Logger()
 	
-	private var implementation: LoggerProtocol?
+	private var implementations: [LoggerProtocol] = []
 
-	public static func setImplementation(_ impl: LoggerProtocol) {
-		shared.implementation = impl
+	public static func addImplementation(_ impl: LoggerProtocol) {
+		shared.implementations.append(impl)
 	}
 	
 	public static func print(level: Logger.Level, _ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-		shared.implementation?.print(level: level, message, file: file, function: function, line: line)
+		shared.implementations.forEach { $0.print(level: level, message, file: file, function: function, line: line) }
 	}
 	
 	public static func verbose(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-		shared.implementation?.print(level: .verbose, message, file: file, function: function, line: line)
+		shared.implementations.forEach { $0.print(level: .verbose, message, file: file, function: function, line: line) }
 	}
 
 	public static func debug(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-		shared.implementation?.print(level: .debug, message, file: file, function: function, line: line)
+		shared.implementations.forEach { $0.print(level: .debug, message, file: file, function: function, line: line) }
 	}
 
 	public static func info(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-		shared.implementation?.print(level: .info, message, file: file, function: function, line: line)
+		shared.implementations.forEach { $0.print(level: .info, message, file: file, function: function, line: line) }
 	}
 
 	public static func warning(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-		shared.implementation?.print(level: .warning, message, file: file, function: function, line: line)
+		shared.implementations.forEach { $0.print(level: .warning, message, file: file, function: function, line: line) }
 	}
 
 	public static func error(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-		shared.implementation?.print(level: .error, message, file: file, function: function, line: line)
+		shared.implementations.forEach { $0.print(level: .error, message, file: file, function: function, line: line) }
 	}
 
 }
